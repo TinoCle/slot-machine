@@ -7,7 +7,7 @@ public class Coin {
         return this;
     }
 
-    public  setCoin(int value){
+    public void setCoin(int value){
         this.value=value;
     }
 }

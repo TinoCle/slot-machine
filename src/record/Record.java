@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Record {
     int betAmount;
-    List<string> reelResults;
-    string gameResult;
+    List<String> reelResults;
+    String gameResult;
     RecordBuilder builder;
 
     public Record (RecordBuilder r){

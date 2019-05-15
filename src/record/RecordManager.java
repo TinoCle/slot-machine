@@ -7,7 +7,7 @@ public class RecordManager {
 
 
     public void onRecordSaved(Record rec){
-        record.add(rec);
+        records.add(rec);
     }
 
     public List<Record> showRecord(){

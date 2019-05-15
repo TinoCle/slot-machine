@@ -6,18 +6,18 @@ import java.util.List;
 
 public class RecordBuilder {
     int betAmount;
-    List<string> reelResults;
-    string gameResult;
+    List<String> reelResults;
+    String gameResult;
 
     public void setBetAmount(int betAmount) {
         this.betAmount = betAmount;
     }
 
-    public void setReelResults(List<string> reelResults) {
+    public void setReelResults(List<String> reelResults) {
         this.reelResults = reelResults;
     }
 
-    public void setGameResult(string gameResult) {
+    public void setGameResult(String gameResult) {
         this.gameResult = gameResult;
     }
 
