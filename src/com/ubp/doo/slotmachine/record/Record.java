@@ -8,9 +8,10 @@ public class Record {
     int betAmount;
     List<String> reelResults;
     String gameResult;
-    RecordBuilder builder;
 
-    public Record (RecordBuilder r){
+    public Record (int bet, List<String> reels, String game) {
+        betAmount = bet;
+        reelResults = reels;
+        gameResult = game;
     }
-
 }
