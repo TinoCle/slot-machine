@@ -1,15 +1,22 @@
 package com.ubp.doo.slotmachine.coin_related;
 
-import java.util.List;
+public class DropBox{
+    private Coin pit;
+    private PayoutTray payoutTray;
+    private CoinSlot coinSlot;
 
-public class DropBox {
-    private List<Coin> pit;
-
-    public void onSetCoin(){
-
+    public DropBox(CoinSlot c, PayoutTray p){
+        pit = new Coin();
+        payoutTray = p;
+        coinSlot = c;
     }
 
-    public void onGetCoin(){
+    public Coin giveCoins(){
+        pit = payoutTray.getTotalCoins();
+        return pit;
+    }
 
+    public void setCoins(){
+        pit = coinSlot.getTotalCoins();
     }
 }
