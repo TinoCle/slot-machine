@@ -14,4 +14,5 @@ public class Record {
         reelResults = reels;
         gameResult = game;
     }
+
 }

@@ -12,7 +12,10 @@ public class ReelManager implements IReelListener {
     }
 
     public void spinReels(){
-
+        System.out.println("Spining Reels\n");
+        for (int i = 0; i < reels.size(); i++) {
+            reels.get(i).spin(10);
+        }
     }
 
     @Override
