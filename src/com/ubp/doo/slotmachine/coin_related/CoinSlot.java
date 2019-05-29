@@ -1,21 +1,21 @@
 package com.ubp.doo.slotmachine.coin_related;
 
 public class CoinSlot {
-    private Coin totalCoins;
+    private int coinInserted;
+
+    public int getCoinInserted() {
+        return coinInserted;
+    }
+
+    public void setCoinInserted(int coinInserted) {
+        this.coinInserted = coinInserted;
+    }
 
     public CoinSlot(){
-        totalCoins = new Coin();
+        coinInserted = 0;
     }
 
-    public void AddCoinSlot(Coin coin){
-        totalCoins.AddCoin(coin.getCoin());
-    }
-
-    public Coin getTotalCoins() {
-        return totalCoins;
-    }
-
-    public void setTotalCoins(Coin totalCoins) {
-        this.totalCoins = totalCoins;
+    public void AddCoin(int coin){
+        coinInserted += coin;
     }
 }
