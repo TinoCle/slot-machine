@@ -37,7 +37,7 @@ public class SlotMachine {
     }
     
     public void play(){
-        
+
     }
     
     public void showResult(){

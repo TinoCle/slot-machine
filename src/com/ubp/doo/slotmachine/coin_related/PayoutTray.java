@@ -1,17 +1,15 @@
 package com.ubp.doo.slotmachine.coin_related;
 
 public class PayoutTray {
-    Coin totalCoins;
+    private int coinToDeliver;
 
-    public PayoutTray(Coin coin){
-        totalCoins = coin;
+    public PayoutTray(){
+        coinToDeliver = 0;
     }
 
-    public Coin getTotalCoins() {
-        return totalCoins;
-    }
-
-    public void setTotalCoins(Coin totalCoins) {
-        this.totalCoins = totalCoins;
+    public int DeliverPrize(int prize){
+        coinToDeliver = prize;
+        System.out.println("El premio a entregar es: " + coinToDeliver);
+        return coinToDeliver;
     }
 }
