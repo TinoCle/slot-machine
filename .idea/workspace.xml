@@ -21,6 +21,9 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="slot-machine" />
+  </component>
   <component name="FileEditorManager">
 <<<<<<< HEAD
     <leaf />
@@ -71,7 +74,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java">
+=======
+        <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/settings/Settings.java">
+>>>>>>> 281f95ad2664bdc621bcfbf9b44d1d52c28ac637
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
               <caret line="7" column="47" lean-forward="true" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
@@ -110,11 +117,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/IRecordListener.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordManager.java" />
+=======
+>>>>>>> 281f95ad2664bdc621bcfbf9b44d1d52c28ac637
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/IRandomize.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/GameModeFactory.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/Randomize.java" />
-        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/Random.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/IGameModeAbstractFactory.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/SequenceFactory.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/RandomFactory.java" />
@@ -158,10 +167,14 @@
     </navigator>
     <panes>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="Scope" />
 =======
 >>>>>>> a509e9f8b6939ffcd99612b9520718d21db9560b
       <pane id="PackagesPane" />
+=======
+      <pane id="Scope" />
+>>>>>>> 281f95ad2664bdc621bcfbf9b44d1d52c28ac637
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -305,6 +318,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.RandomTest" />
@@ -380,8 +409,8 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32899022" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3289689" />
@@ -703,7 +732,11 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/test/com/ubp/doo/slotmachine/gamemode/SequenceTest.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/ReelManager.java">
+>>>>>>> 281f95ad2664bdc621bcfbf9b44d1d52c28ac637
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="60" column="51" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
@@ -751,7 +784,18 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/Record.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/settings/SettingsLoader.java">
+>>>>>>> 281f95ad2664bdc621bcfbf9b44d1d52c28ac637
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />

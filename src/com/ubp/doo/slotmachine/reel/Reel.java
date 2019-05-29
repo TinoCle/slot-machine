@@ -7,7 +7,6 @@ public class Reel {
     public void spin(int spins){
 
     }
-
     public void setListener(IReelListener listener){
 
     }
