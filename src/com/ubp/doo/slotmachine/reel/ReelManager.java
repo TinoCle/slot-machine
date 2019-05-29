@@ -1,11 +1,12 @@
 package com.ubp.doo.slotmachine.reel;
 
+import com.ubp.doo.slotmachine.coin_related.IReceiveCoin;
+
 import java.util.List;
 
-public class ReelManager {
+public class ReelManager implements IReelListener {
     List<Reel> reels;
 
-    //no se si este metodo iria
     public void start(){
 
     }
@@ -17,6 +18,7 @@ public class ReelManager {
         }
     }
 
+    @Override
     public void onReelFinished (Reel reel){
 
     }
