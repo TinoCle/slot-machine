@@ -1,9 +1,17 @@
 package com.ubp.doo.slotmachine.coin_related;
 
 public class PayoutTray {
-    Coin coins;
-    
-    public Coin giveCoins(int amount){
-        return coins;
+    Coin totalCoins;
+
+    public PayoutTray(Coin coin){
+        totalCoins = coin;
+    }
+
+    public Coin getTotalCoins() {
+        return totalCoins;
+    }
+
+    public void setTotalCoins(Coin totalCoins) {
+        this.totalCoins = totalCoins;
     }
 }

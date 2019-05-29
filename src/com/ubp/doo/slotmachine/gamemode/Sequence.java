@@ -1,6 +1,5 @@
 package com.ubp.doo.slotmachine.gamemode;
 
-import javax.print.DocFlavor;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +11,7 @@ public class Sequence extends GameMode{
     public Sequence(List<Integer> reelsize, int quantity, IRandomize r){
         super(r);
         this.reelsize = reelsize;
-        sequence = new ArrayList<List<Integer>>();
+        sequence = new ArrayList<>();
         index = 0;
         for (int i = 0; i < quantity; i++) {
             sequence.add(getRandoms(reelsize));
