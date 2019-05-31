@@ -13,4 +13,16 @@ public class Record {
         gameResult = game;
     }
 
+    public int getBetAmount() {
+        return betAmount;
+    }
+
+    public List<String> getReelResults() {
+        return reelResults;
+    }
+
+    public String getGameResult() {
+        return gameResult;
+    }
+
 }

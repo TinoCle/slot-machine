@@ -25,7 +25,7 @@ public class RecordManager implements java.io.Serializable {
     public void showRecords(){
         System.out.println("Record nº\tBetAmount\tResult\tReels\n");
         for (int i = 0; i < records.size(); i++) {
-            System.out.println(i+"\t"+records.get(i).betAmount+"\t"+records.get(i).gameResult+"\t"+records.get(i).reelResults+"\n");
+            System.out.println(i+"\t"+records.get(i).getBetAmount()+"\t"+records.get(i).getGameResult()+"\t"+records.get(i).getReelResults()+"\n");
         }
     }
 

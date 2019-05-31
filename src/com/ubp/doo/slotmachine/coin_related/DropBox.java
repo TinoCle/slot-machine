@@ -7,5 +7,7 @@ public class DropBox{
         totalCoin = storedCoin;
     }
 
-
+    public void setTotalCoin(int totalCoin) {
+        this.totalCoin = totalCoin;
+    }
 }

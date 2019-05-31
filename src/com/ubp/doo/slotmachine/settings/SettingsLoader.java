@@ -7,16 +7,11 @@ public class SettingsLoader {
 
     public void SaveSettings(Settings settings){
         try {
-            // System.getProperty("user.dir") me trae el path de donde esta el proyecto
             OutputStream output = new FileOutputStream(System.getProperty("user.dir") + "config.properties");
-            Properties prop;
-
-            //a modo de ejemplo:
-            //prop.setProperty("GameMode",settings.GameMode);
-            //prop.setProperty("DropBoxAmount",settings.DropBoxAmount);
-
-            //aca lo guardo en el path
-            //prop.store(output,null);
+            Properties prop = new Properties();
+            prop.setProperty("GameMode",settings.getGameMode());
+            prop.setProperty("DropBox",settings.getGameMode());
+            prop.store(output,null);
         }
         catch (FileNotFoundException e){
             System.out.println(e.getMessage());

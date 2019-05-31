@@ -1,27 +1,35 @@
 package com.ubp.doo.slotmachine.settings;
 
 import java.util.Properties;
+import com.ubp.doo.slotmachine.gamemode.GameMode;
+import com.ubp.doo.slotmachine.coin_related.DropBox;
 
 // Se aplica el patrón singleton
 public class Settings {
     private static Settings instance;
     private SettingsLoader loader;
+    private String gameMode;
+    private int dropBox;
 
-    //Faltan las opciones de configuracion
+    public String getGameMode() {
+        return gameMode;
+    }
 
-    //en el constructor deberiamos definir las opciones por defecto
+    public int getDropBox() {
+        return dropBox;
+    }
+
     private Settings(){
-        //this.GameMode="random";
+        Properties properties = loader.LoadSettings();
+        if(properties!=null) {
+            gameMode = properties.getProperty("GameMode");
+            dropBox = Integer.parseInt(properties.getProperty("DropBox"));
+        }
     }
 
     public static Settings getInstance() {
         if (instance == null) {
-            Properties properties = loader.LoadSettings();
             instance = new Settings();
-            if(properties!=null) {
-                this.GameMode = properties.getProperty("GameMode");
-                this.DropBoxAmount = properties.getProperty("DropBoxAmount");
-            }
         }
         return instance;
     }
