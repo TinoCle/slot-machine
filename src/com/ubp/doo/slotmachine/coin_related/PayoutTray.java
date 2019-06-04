@@ -1,9 +1,15 @@
 package com.ubp.doo.slotmachine.coin_related;
 
 public class PayoutTray {
-    Coin coins;
-    
-    public Coin giveCoins(int amount){
-        return coins;
+    private int coinToDeliver;
+
+    public PayoutTray(){
+        coinToDeliver = 0;
+    }
+
+    public int DeliverPrize(int prize){
+        coinToDeliver = prize;
+        System.out.println("El premio a entregar es: " + coinToDeliver);
+        return coinToDeliver;
     }
 }
