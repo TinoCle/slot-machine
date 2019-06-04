@@ -9,15 +9,9 @@ public class Main {
         CoinSlot coinSlot = new CoinSlot();
         DropBox dropBox = new DropBox(coin);
 
-        coin = 1;
-        try{
-            coinSlot.AddCoin(coin);
-            coinSlot.AddCoin(coin);
-            coinSlot.AddCoin(coin);
-        }
-        catch (IOException io){
-            System.out.println(io.getMessage());
-        }
+        coinSlot.AddCoin();
+        coinSlot.AddCoin();
+        coinSlot.AddCoin();
 
         System.out.println("La cantidad de fichas insertadas es: " + coinSlot.getCoinInserted());
     }

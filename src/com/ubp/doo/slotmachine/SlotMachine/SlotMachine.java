@@ -20,6 +20,7 @@ public class SlotMachine {
     private DropBox dropBox;
     private GameMode gameMode;
     private Display display;
+    private Settings settings;
     
     private static SlotMachine instance;
     
@@ -37,8 +38,22 @@ public class SlotMachine {
     public void loadConfiguration(){
         Settings settings = Settings.getInstance();
 
+        //TODO comprobar que las settings esten
+        /*System.out.println("GameMode: " + settings.getGameMode());
+        System.out.println("ReelSize: " + settings.getReelSize());
+        System.out.println("DropBox: " + settings.getDropBox());
+        System.out.println("ReelQuantity: " + settings.getReelsQuantity());
+        System.out.println("SequenceQuantity: " + settings.getSequencesQuantity());*/
+
         IRandomize randomize = new Randomize();
         List<Integer> reelSize = new ArrayList<>();
+
+        int reelQuantity = settings.getReelsQuantity();
+
+        for(int i=0;i<reelQuantity;i++){
+            String valor = settings.getReelSize().split(",")[i];
+            reelSize.add(Integer.parseInt(valor));
+        }
 
         if(settings.getGameMode() == "random"){
             GameMode random = GameModeFactory.getGameMode(new RandomFactory(reelSize, randomize));
@@ -46,7 +61,8 @@ public class SlotMachine {
         else{
             GameMode sequence = GameModeFactory.getGameMode(new SequenceFactory(reelSize, settings.getSequencesQuantity(), randomize));
         }
-        dropBox.setTotalCoin(settings.getDropBox());
+
+        dropBox = new DropBox(settings.getDropBox());
     }
     
     public void initComponents(){
