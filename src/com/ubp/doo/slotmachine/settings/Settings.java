@@ -1,8 +1,8 @@
 package com.ubp.doo.slotmachine.settings;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
-import com.ubp.doo.slotmachine.gamemode.GameMode;
-import com.ubp.doo.slotmachine.coin_related.DropBox;
 
 // Se aplica el patrón singleton
 public class Settings {
@@ -10,6 +10,9 @@ public class Settings {
     private SettingsLoader loader;
     private String gameMode;
     private int dropBox;
+    private int sequencesQuantity;
+    private int reelsQuantity;
+    private List<Integer> reelSize;
 
     public String getGameMode() {
         return gameMode;
@@ -19,11 +22,34 @@ public class Settings {
         return dropBox;
     }
 
+    public int getSequencesQuantity() {
+        return sequencesQuantity;
+    }
+
+    public int getReelsQuantity() {
+        return reelsQuantity;
+    }
+
+    public List<Integer> getReelSize() {
+        return reelSize;
+    }
+
     private Settings(){
-        Properties properties = loader.LoadSettings();
-        if(properties!=null) {
+        try{
+            Properties properties = loader.LoadSettings();
             gameMode = properties.getProperty("GameMode");
             dropBox = Integer.parseInt(properties.getProperty("DropBox"));
+            sequencesQuantity = Integer.parseInt(properties.getProperty("SequencesQuantity"));
+        }
+        catch (NullPointerException npe){
+            gameMode = "random";
+            dropBox = 1000;
+            reelSize = new ArrayList<>();
+            reelSize.add(8);
+            reelSize.add(8);
+            reelSize.add(8);
+            sequencesQuantity = 10;
+            reelsQuantity = 3;
         }
     }
 
