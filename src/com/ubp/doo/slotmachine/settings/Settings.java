@@ -1,32 +1,103 @@
 package com.ubp.doo.slotmachine.settings;
 
+import java.io.*;
 import java.util.Properties;
 
 // Se aplica el patrón singleton
 public class Settings {
     private static Settings instance;
-    private SettingsLoader loader;
+    private String gameMode;
+    private int dropBox;
+    private int sequencesQuantity;
+    private int reelsQuantity;
+    private String reelSize;
+    private Properties properties;
 
-    //Faltan las opciones de configuracion
+    public String getGameMode() {
+        return gameMode;
+    }
 
-    //en el constructor deberiamos definir las opciones por defecto
+    public int getDropBox() {
+        return dropBox;
+    }
+
+    public int getSequencesQuantity() {
+        return sequencesQuantity;
+    }
+
+    public int getReelsQuantity() {
+        return reelsQuantity;
+    }
+
+    public String getReelSize() {
+        return reelSize;
+    }
+
     private Settings(){
-        //this.GameMode="random";
+        properties = new Properties();
+        LoadSettings();
     }
 
     public static Settings getInstance() {
         if (instance == null) {
-            Properties properties = loader.LoadSettings();
             instance = new Settings();
-            if(properties!=null) {
-                this.GameMode = properties.getProperty("GameMode");
-                this.DropBoxAmount = properties.getProperty("DropBoxAmount");
-            }
         }
         return instance;
     }
 
     public void SaveSettings(){
-        loader.SaveSettings(this);
+        try {
+            OutputStream output = new FileOutputStream(System.getProperty("user.dir") + "config.properties");
+
+            gameMode = "random";
+            dropBox = 1000;
+            sequencesQuantity = 10;
+            reelsQuantity = 3;
+            reelSize = "";
+            for(int i=0;i<reelsQuantity;i++){
+
+                if(i==reelsQuantity-1){
+                    reelSize += ((int) (Math.random() * 12) + 1);
+                }
+                else{
+                    reelSize +=  ((int) (Math.random() * 12) + 1) + ",";
+                }
+            }
+
+            properties.setProperty("GameMode",gameMode);
+            properties.setProperty("DropBox",Integer.toString(dropBox));
+            properties.setProperty("SequencesQuantity",Integer.toString(sequencesQuantity));
+            properties.setProperty("ReelsQuantity", Integer.toString(reelsQuantity));
+            properties.setProperty("ReelSize",reelSize);
+            properties.store(output,null);
+        }
+        catch (FileNotFoundException e){
+            System.out.println(e.getMessage());
+        }
+        catch (IOException io){
+            io.printStackTrace();
+        }
+    }
+
+    public void LoadSettings (){
+        try {
+            InputStream input = new FileInputStream(System.getProperty("user.dir") + "config.properties");
+
+            //TODO ver donde se guarda las settigs
+            //System.out.println(System.getProperty("user.dir") + "config.properties");
+
+            properties.load(input);
+            gameMode = properties.getProperty("GameMode");
+            dropBox = Integer.parseInt(properties.getProperty("DropBox"));
+            sequencesQuantity = Integer.parseInt(properties.getProperty("SequencesQuantity"));
+            reelsQuantity = Integer.parseInt(properties.getProperty("ReelsQuantity"));
+            reelSize = properties.getProperty("ReelSize");
+        }
+        catch (FileNotFoundException e){
+            SaveSettings();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
     }
 }

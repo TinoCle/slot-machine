@@ -42,9 +42,9 @@ class RandomTest {
         List<Integer> result = random.getNextValues();
 
         List<Integer> expResult = new ArrayList<>();
-        expResult.add(1);
-        expResult.add(2);
         expResult.add(3);
+        expResult.add(1);
+        expResult.add(0);
 
         assertNotEquals(expResult,result);
     }
