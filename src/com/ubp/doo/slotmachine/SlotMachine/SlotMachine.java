@@ -1,31 +1,41 @@
 package com.ubp.doo.slotmachine.SlotMachine;
 
+import com.ubp.doo.slotmachine.coin_related.BetManager;
 import com.ubp.doo.slotmachine.gamemode.*;
 import com.ubp.doo.slotmachine.reel.ReelManager;
 import com.ubp.doo.slotmachine.record.RecordManager;
-import com.ubp.doo.slotmachine.coin_related.CoinSlot;
-import com.ubp.doo.slotmachine.coin_related.PayoutTray;
-import com.ubp.doo.slotmachine.coin_related.DropBox;
 import com.ubp.doo.slotmachine.display.Display;
 import com.ubp.doo.slotmachine.settings.Settings;
+import slotmachine.ui.data.ICredit;
+import slotmachine.ui.handler.IDisplayHandler;
+import slotmachine.ui.handler.IPlayHandler;
+import slotmachine.ui.handler.IPrizeHandler;
+import slotmachine.ui.handler.ICreditHandler;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
-public class SlotMachine {
+public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandler, IPrizeHandler {
     private ReelManager reelManager;
     private RecordManager recordManager;
-    private CoinSlot coinSlot;
+    public BetManager betManager;
+
+    //TODO: ver si estas 3 clases las dejamos aca o movemos too a BetManager
+    /*private CoinSlot coinSlot;
     private PayoutTray payoutTray;
-    private DropBox dropBox;
+    private DropBox dropBox;*/
+
     private GameMode gameMode;
     private Display display;
     private Settings settings;
-    
+
+    private IDisplayHandler iDisplayHandler;
+    private IPrizeHandler iPrizeHandler;
     private static SlotMachine instance;
-    
+
     private SlotMachine(){
-        
     }
     
     public static SlotMachine getInstance(){
@@ -64,22 +74,66 @@ public class SlotMachine {
 
         reelManager = new ReelManager(reelSize, reelQuantity);
 
-        dropBox = new DropBox(settings.getDropBox());
+        betManager = new BetManager(settings.getDropBox());
+        //dropBox = new DropBox(settings.getDropBox());
     }
     
     public void initComponents(){
         
     }
-    
-    public void play(){
 
+
+    //Funcion que se dispara cuando se presiona el boton Play
+    @Override
+    public void play() {
+        if (betManager.getBet() >= 5){
+            //play
+            iDisplayHandler.setText("AAAAAAA");
+        }
+        else{
+            iDisplayHandler.setText("Cantidad Insuficiente de Monedas");
+            Timer timer = new Timer();
+            timer.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    iDisplayHandler.setText("Bet: " + betManager.getBet());
+                }
+            }, 2000);
+        }
     }
-    
+
+    //Funcion que se usa para mostrar algun mensaje en el Display del GUI
+    @Override
+    public void setText(String text) {
+        iDisplayHandler.setText(text);
+    }
+
+    @Override
+    public void retrieve(int prize) {
+        iDisplayHandler.setText("Prize: " + prize);
+        iPrizeHandler.retrieve(prize);
+    }
+
+    public void setDisplayHander(IDisplayHandler displayHandler){
+        this.iDisplayHandler = displayHandler;
+        betManager.setiDisplayHandler(displayHandler);
+    }
+
+    public void setiPrizeHandler (IPrizeHandler iPrizeHandler){
+        this.iPrizeHandler = iPrizeHandler;
+    }
+
     public void showResult(){
         
     }
     
     private void setGameMode(){
         
+    }
+
+    @Override
+    public void addCredit(ICredit credit) {
+        betManager.addCoin(credit.getValue());
+        iDisplayHandler.setText("Bet: "+ betManager.getBet());
     }
 }

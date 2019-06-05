@@ -1,21 +1,25 @@
 package com.ubp.doo.slotmachine.coin_related;
 
 public class CoinSlot {
-    private int coinInserted;
+    private int coinsInserted;
 
     public int getCoinInserted() {
-        return coinInserted;
+        return coinsInserted;
     }
 
     public void setCoinInserted(int coinInserted) {
-        this.coinInserted = coinInserted;
+        this.coinsInserted = coinInserted;
     }
 
     public CoinSlot(){
-        coinInserted = 0;
+        coinsInserted = 0;
     }
 
-    public void AddCoin(){
-         coinInserted++;
+    public void AddCoin(int amount){
+         coinsInserted+=amount;
+    }
+
+    public void SetCoins(int amount){
+        this.coinsInserted=amount;
     }
 }
