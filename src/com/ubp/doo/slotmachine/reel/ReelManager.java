@@ -6,12 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReelManager implements IReelListener{
-    List<Reel> reels;
-    List<Integer> reelSize;
-    String mensaje;
+    private List<Reel> reels;
+    private List<Reel> spinningReels;
+    private List<Integer> reelSize;
+    private IReelManagerListener reelManagerListener;
 
     public ReelManager(GameMode gameMode, int qty){
         reels = new ArrayList<>();
+        spinningReels = new ArrayList<>();
         for(int i=0;i<qty;i++) {
             Reel r = new Reel(gameMode, i);
             r.setListener(this);
@@ -19,28 +21,23 @@ public class ReelManager implements IReelListener{
         }
     }
 
-    @Override
     public void spinReels(){
         System.out.println("Spining Reels\n");
         for (int i = 0; i < reels.size(); i++) {
             reels.get(i).spin(10);
-            System.out.println(mensaje);
         }
+        spinningReels.addAll(reels);
     }
 
     @Override
-    public void onReelFinished(String mensaje){
-        this.mensaje = mensaje;
+    public void onReelFinished(Reel reel){
+        spinningReels.remove(reel);
+        if(spinningReels.size()==0){
+            reelManagerListener.onReelsFinished();
+        }
     }
 
-
-    /*
-    //metodo de testing, borrar
-    public void tellMeTheTruth() {
-        System.out.println("Reel results:\n");
-        for (int i = 0; i < reels.size(); i++) {
-            System.out.println("Reel " + i + ": " + reels.get(i).getValue() + "\n");
-        }
-    }*/
-
+    public void setListener(IReelManagerListener reelManagerListener){
+        this.reelManagerListener = reelManagerListener;
+    }
 }
