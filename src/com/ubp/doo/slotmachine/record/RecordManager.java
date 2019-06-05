@@ -6,11 +6,6 @@ public class RecordManager implements java.io.Serializable {
     List<Record> records;
     RecordPersistance recordSaver;
 
-    public RecordManager() {
-        //aca deberia leer de memoria persistente los records
-        records = recordSaver.Deserialize();
-    }
-
     public void saveRecord(int betAmount, List<String> reelsResult, String gameResult){
         Record record = new Record(betAmount, reelsResult, gameResult);
         records.add(record);
@@ -23,9 +18,15 @@ public class RecordManager implements java.io.Serializable {
     }
 
     public void showRecords(){
-        System.out.println("Record nº\tBetAmount\tResult\tReels\n");
-        for (int i = 0; i < records.size(); i++) {
-            System.out.println(i+"\t"+records.get(i).getBetAmount()+"\t"+records.get(i).getGameResult()+"\t"+records.get(i).getReelResults()+"\n");
+        try {
+            //Leo la size primero para que salte la excepción antes que nada
+            int x = records.size();
+            System.out.println("Record nº\tBetAmount\tResult\tReels\n");
+            for (int i = 0; i < x; i++) {
+                System.out.println(i+"\t"+records.get(i).getBetAmount()+"\t"+records.get(i).getGameResult()+"\t"+records.get(i).getReelResults()+"\n");
+            }
+        } catch (NullPointerException e) {
+            System.out.println("No existen records para leer.");
         }
     }
 
