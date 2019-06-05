@@ -62,6 +62,8 @@ public class SlotMachine {
             GameMode sequence = GameModeFactory.getGameMode(new SequenceFactory(reelSize, settings.getSequencesQuantity(), randomize));
         }
 
+        reelManager = new ReelManager(reelSize, reelQuantity);
+
         dropBox = new DropBox(settings.getDropBox());
     }
     

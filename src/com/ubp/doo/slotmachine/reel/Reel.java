@@ -1,14 +1,21 @@
 package com.ubp.doo.slotmachine.reel;
 
 public class Reel {
-    int size;
-    IReelListener listener;
+    int value;
+
+    public Reel(){}
+
+    public Reel(int v) {
+        this.value = v;
+    }
 
     public void spin(int spins){
-
+        this.value = spins;
     }
-    public void setListener(IReelListener listener){
 
+    //metodo de testing, borrar
+    public int getValue(){
+        return this.value;
     }
 
 }
