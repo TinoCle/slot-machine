@@ -33,7 +33,7 @@ public class Settings {
         return reelSize;
     }
 
-    private Settings(){
+    private Settings() {
         properties = new Properties();
         LoadSettings();
     }
@@ -45,7 +45,7 @@ public class Settings {
         return instance;
     }
 
-    public void SaveSettings(){
+    public void SaveSettings() {
         try {
             OutputStream output = new FileOutputStream(System.getProperty("user.dir") + "config.properties");
 
@@ -54,32 +54,29 @@ public class Settings {
             sequencesQuantity = 10;
             reelsQuantity = 3;
             reelSize = "";
-            for(int i=0;i<reelsQuantity;i++){
+            for (int i = 0; i < reelsQuantity; i++) {
 
-                if(i==reelsQuantity-1){
+                if (i == reelsQuantity - 1) {
                     reelSize += ((int) (Math.random() * 12) + 1);
-                }
-                else{
-                    reelSize +=  ((int) (Math.random() * 12) + 1) + ",";
+                } else {
+                    reelSize += ((int) (Math.random() * 12) + 1) + ",";
                 }
             }
 
-            properties.setProperty("GameMode",gameMode);
-            properties.setProperty("DropBox",Integer.toString(dropBox));
-            properties.setProperty("SequencesQuantity",Integer.toString(sequencesQuantity));
+            properties.setProperty("GameMode", gameMode);
+            properties.setProperty("DropBox", Integer.toString(dropBox));
+            properties.setProperty("SequencesQuantity", Integer.toString(sequencesQuantity));
             properties.setProperty("ReelsQuantity", Integer.toString(reelsQuantity));
-            properties.setProperty("ReelSize",reelSize);
-            properties.store(output,null);
-        }
-        catch (FileNotFoundException e){
+            properties.setProperty("ReelSize", reelSize);
+            properties.store(output, null);
+        } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
-        }
-        catch (IOException io){
+        } catch (IOException io) {
             io.printStackTrace();
         }
     }
 
-    public void LoadSettings (){
+    public void LoadSettings() {
         try {
             InputStream input = new FileInputStream(System.getProperty("user.dir") + "config.properties");
 
@@ -92,11 +89,9 @@ public class Settings {
             sequencesQuantity = Integer.parseInt(properties.getProperty("SequencesQuantity"));
             reelsQuantity = Integer.parseInt(properties.getProperty("ReelsQuantity"));
             reelSize = properties.getProperty("ReelSize");
-        }
-        catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             SaveSettings();
-        }
-        catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
