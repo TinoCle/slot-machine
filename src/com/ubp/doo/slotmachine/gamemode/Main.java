@@ -15,11 +15,8 @@ public class Main {
         GameMode random = GameModeFactory.getGameMode(new RandomFactory(reelSize, randomize));
         GameMode sequence = GameModeFactory.getGameMode(new SequenceFactory(reelSize, 10, randomize));
 
-<<<<<<< HEAD
-        /*for (int i = 0; i < 10; i++) {
-=======
+/*
         for (int i = 0; i < 20; i++) {
->>>>>>> b9f8ec9540ad4e3ab1bad554f1097f34aa2d0eaf
             System.out.println(i+" "+random.getNextValues());
         }
         System.out.println("----------------------------------------------------");

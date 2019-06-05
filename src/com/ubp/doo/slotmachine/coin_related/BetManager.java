@@ -1,5 +1,6 @@
 package com.ubp.doo.slotmachine.coin_related;
 
+import slotmachine.ui.data.ICredit;
 import slotmachine.ui.handler.IDisplayHandler;
 
 public class BetManager implements IDisplayHandler {
@@ -34,7 +35,7 @@ public class BetManager implements IDisplayHandler {
         return this.bet;
     }
 
-    public void addCoin(int amount){
+    public void addCoin(ICredit amount){
         this.coinSlot.AddCoin(amount);
     }
 

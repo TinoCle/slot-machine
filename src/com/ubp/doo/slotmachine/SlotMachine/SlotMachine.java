@@ -36,18 +36,20 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
     private IPrizeHandler iPrizeHandler;
     private static SlotMachine instance;
 
-    private SlotMachine() {
+    private int betAmount;
+
+    private SlotMachine(){
         loadConfiguration();
     }
 
-    public static SlotMachine getInstance() {
-        if (instance == null) {
+    public static SlotMachine getInstance(){
+        if(instance==null){
             instance = new SlotMachine();
         }
         return instance;
     }
 
-    public void loadConfiguration() {
+    public void loadConfiguration(){
         Settings settings = Settings.getInstance();
 
         //TODO comprobar que las settings esten
@@ -62,14 +64,15 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
 
         int reelQuantity = settings.getReelsQuantity();
 
-        for (int i = 0; i < reelQuantity; i++) {
+        for(int i=0;i<reelQuantity;i++){
             String valor = settings.getReelSize().split(",")[i];
             reelSize.add(Integer.parseInt(valor));
         }
 
-        if (settings.getGameMode() == "random") {
+        if(settings.getGameMode() == "random"){
             gameMode = GameModeFactory.getGameMode(new RandomFactory(reelSize, randomize));
-        } else {
+        }
+        else{
             gameMode = GameModeFactory.getGameMode(new SequenceFactory(reelSize, settings.getSequencesQuantity(), randomize));
         }
 
@@ -81,7 +84,7 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
     }
 
     @Override
-    public void onReelsFinished() {
+    public void onReelsFinished(){
         System.out.println("Los reels han terminado de girar");
     }
 
@@ -89,11 +92,13 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
     //Funcion que se dispara cuando se presiona el boton Play
     @Override
     public void play() {
-        if (betManager.getBet() >= 5) {
-            //play de emi
+        if (betManager.getBet() >= 5){
+            //play
             reelManager.spinReels();
             iDisplayHandler.setText("AAAAAAA");
-        } else {
+            this.showResult();
+        }
+        else{
             iDisplayHandler.setText("Cantidad Insuficiente de Monedas");
             Timer timer = new Timer();
             timer.schedule(new TimerTask() {
@@ -110,33 +115,34 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
     public void setText(String text) {
         iDisplayHandler.setText(text);
     }
-    
+
+
     @Override
     public void retrieve(int prize) {
         iDisplayHandler.setText("Prize: " + prize);
         iPrizeHandler.retrieve(prize);
     }
 
-    public void setDisplayHander(IDisplayHandler displayHandler) {
+    public void setDisplayHander(IDisplayHandler displayHandler){
         this.iDisplayHandler = displayHandler;
         betManager.setiDisplayHandler(displayHandler);
     }
 
-    public void setiPrizeHandler(IPrizeHandler iPrizeHandler) {
+    public void setiPrizeHandler (IPrizeHandler iPrizeHandler){
         this.iPrizeHandler = iPrizeHandler;
     }
 
-    public void showResult() {
+    public void showResult(){
         System.out.println("Resultado: " + reelManager.getResults());
     }
 
-    private void setGameMode() {
+    private void setGameMode(){
 
     }
 
     @Override
     public void addCredit(ICredit credit) {
-        betManager.addCoin(credit.getValue());
-        iDisplayHandler.setText("Bet: " + betManager.getBet());
+        betManager.addCoin(credit);
+        iDisplayHandler.setText("Bet: "+ betManager.getBet());
     }
 }

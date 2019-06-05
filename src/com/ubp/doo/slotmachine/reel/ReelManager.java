@@ -29,6 +29,7 @@ public class ReelManager implements IReelListener{
 
     public void spinReels(){
         System.out.println("Spining Reels\n");
+        results.clear();
         for (int i = 0; i < reels.size(); i++) {
             reels.get(i).spin(10);
             spinningReels.add(reels.get(i));
