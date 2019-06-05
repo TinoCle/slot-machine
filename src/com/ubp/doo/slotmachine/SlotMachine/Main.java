@@ -5,6 +5,7 @@ import slotmachine.ui.view.SlotMachineViewFacade;
 public class Main {
     public static void main(String[] args) {
         SlotMachine slotMachine = SlotMachine.getInstance();
+
         slotMachine.loadConfiguration();
 
         SlotMachineViewFacade.setPlayHandler(slotMachine);
@@ -16,6 +17,9 @@ public class Main {
         SlotMachineViewFacade.show();
 
         slotMachine.betManager.setText("ASDASDASD");
+
+        slotMachine.play();
+        slotMachine.showResult();
 
     }
 }

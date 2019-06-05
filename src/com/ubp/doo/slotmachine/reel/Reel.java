@@ -1,21 +1,47 @@
 package com.ubp.doo.slotmachine.reel;
+import com.ubp.doo.slotmachine.gamemode.GameMode;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Reel {
-    int value;
+    private int spins;
+    private int reelNumber;
+    private List<Integer> results;
+    private int lastResult;
+    private GameMode gameMode;
+    private IReelListener reelListener;
 
-    public Reel(){}
+    public int getReelNumber() {
+        return reelNumber;
+    }
 
-    public Reel(int v) {
-        this.value = v;
+    public List<Integer> getResults() {
+        return results;
+    }
+
+    public int getLastResult() {
+        return lastResult;
+    }
+
+    public Reel(GameMode gameMode, int reelNumber){
+        this.gameMode = gameMode;
+        this.reelNumber = reelNumber;
+        spins = 0;
+        results = new ArrayList<>();
     }
 
     public void spin(int spins){
-        this.value = spins;
+        this.spins = spins;
+        for(int i=0;i<spins;i++){
+            results.add(gameMode.getNextValues().get(reelNumber));
+            // System.out.println(" " + gameMode.getNextValues().get(reelNumber));
+        }
+        lastResult = results.get(results.size()-1);
+        reelListener.onReelFinished(this);
     }
 
-    //metodo de testing, borrar
-    public int getValue(){
-        return this.value;
+    public void setListener (IReelListener reelListener){
+        this.reelListener = reelListener;
     }
-
 }

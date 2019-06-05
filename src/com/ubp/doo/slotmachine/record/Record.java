@@ -4,10 +4,10 @@ import java.util.List;
 
 public class Record {
     private int betAmount;
-    private List<String> reelResults;
+    private List<Integer> reelResults;
     private String gameResult;
 
-    public Record (int bet, List<String> reels, String game) {
+    public Record (int bet, List<Integer> reels, String game) {
         betAmount = bet;
         reelResults = reels;
         gameResult = game;
@@ -17,7 +17,7 @@ public class Record {
         return betAmount;
     }
 
-    public List<String> getReelResults() {
+    public List<Integer> getReelResults() {
         return reelResults;
     }
 
