@@ -9,9 +9,10 @@ public class RecordManager implements java.io.Serializable {
     public RecordManager() {
         //aca deberia leer de memoria persistente los records
         records = recordSaver.Deserialize();
+
     }
 
-    public void saveRecord(int betAmount, List<String> reelsResult, String gameResult){
+    public void saveRecord(int betAmount, List<Integer> reelsResult, String gameResult){
         Record record = new Record(betAmount, reelsResult, gameResult);
         records.add(record);
         recordSaver.Serialize(records);
