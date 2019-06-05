@@ -56,23 +56,19 @@ public class SlotMachine {
         }
 
         if(settings.getGameMode() == "random"){
-            GameMode random = GameModeFactory.getGameMode(new RandomFactory(reelSize, randomize));
+            gameMode = GameModeFactory.getGameMode(new RandomFactory(reelSize, randomize));
         }
         else{
-            GameMode sequence = GameModeFactory.getGameMode(new SequenceFactory(reelSize, settings.getSequencesQuantity(), randomize));
+            gameMode = GameModeFactory.getGameMode(new SequenceFactory(reelSize, settings.getSequencesQuantity(), randomize));
         }
 
-        reelManager = new ReelManager(reelSize, reelQuantity);
+        reelManager = new ReelManager(gameMode, reelQuantity);
 
         dropBox = new DropBox(settings.getDropBox());
     }
     
-    public void initComponents(){
-        
-    }
-    
     public void play(){
-
+        reelManager.spinReels();
     }
     
     public void showResult(){

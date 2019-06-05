@@ -1,21 +1,32 @@
 package com.ubp.doo.slotmachine.reel;
+import com.ubp.doo.slotmachine.gamemode.GameMode;
+
+import java.util.List;
 
 public class Reel {
-    int value;
+    int spins;
+    int reelNumber;
+    GameMode gameMode;
+    IReelListener reelListener;
 
-    public Reel(){}
-
-    public Reel(int v) {
-        this.value = v;
+    public Reel(GameMode gameMode, int reelNumber){
+        this.gameMode = gameMode;
+        this.reelNumber = reelNumber;
     }
 
     public void spin(int spins){
-        this.value = spins;
+        this.spins = spins;
+        for(int i=0;i<spins;i++){
+            System.out.println(" " + gameMode.getNextValues().get(reelNumber));
+            mostrarMensaje();
+        }
     }
 
-    //metodo de testing, borrar
-    public int getValue(){
-        return this.value;
+    public void mostrarMensaje(){
+        reelListener.onReelFinished("Termine de girar");
     }
 
+    public void setListener (IReelListener reelListener){
+        this.reelListener = reelListener;
+    }
 }
