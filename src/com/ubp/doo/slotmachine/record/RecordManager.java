@@ -10,7 +10,6 @@ public class RecordManager implements java.io.Serializable {
         Record record = new Record(betAmount, reelsResult, gameResult);
         records.add(record);
         recordSaver.Serialize(records);
-        //aca se ejecutaria la sentencia que lo guarda en memoria persistente
     }
 
     public List<Record> showRecord(){
@@ -18,16 +17,15 @@ public class RecordManager implements java.io.Serializable {
     }
 
     public void showRecords(){
-        try {
+        if (this.showRecord() != null) {
             //Leo la size primero para que salte la excepción antes que nada
             int x = records.size();
             System.out.println("Record nº\tBetAmount\tResult\tReels\n");
             for (int i = 0; i < x; i++) {
                 System.out.println(i+"\t"+records.get(i).getBetAmount()+"\t"+records.get(i).getGameResult()+"\t"+records.get(i).getReelResults()+"\n");
             }
-        } catch (NullPointerException e) {
+        } else {
             System.out.println("No existen records para leer.");
         }
     }
-
 }
