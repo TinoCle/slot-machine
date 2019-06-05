@@ -55,7 +55,6 @@ public class Settings {
             reelsQuantity = 3;
             reelSize = "";
             for (int i = 0; i < reelsQuantity; i++) {
-
                 if (i == reelsQuantity - 1) {
                     reelSize += ((int) (Math.random() * 12) + 1);
                 } else {
@@ -81,7 +80,7 @@ public class Settings {
             InputStream input = new FileInputStream(System.getProperty("user.dir") + "config.properties");
 
             //TODO ver donde se guarda las settigs
-            //System.out.println(System.getProperty("user.dir") + "config.properties");
+            System.out.println(System.getProperty("user.dir") + "config.properties");
 
             properties.load(input);
             gameMode = properties.getProperty("GameMode");
