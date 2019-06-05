@@ -5,15 +5,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Reel {
-    int spins;
-    int reelNumber;
-    List<Integer> results;
-    GameMode gameMode;
-    IReelListener reelListener;
+    private int spins;
+    private int reelNumber;
+    private List<Integer> results;
+    private int lastResult;
+    private GameMode gameMode;
+    private IReelListener reelListener;
+
+    public int getReelNumber() {
+        return reelNumber;
+    }
+
+    public List<Integer> getResults() {
+        return results;
+    }
+
+    public int getLastResult() {
+        return lastResult;
+    }
 
     public Reel(GameMode gameMode, int reelNumber){
         this.gameMode = gameMode;
         this.reelNumber = reelNumber;
+        spins = 0;
         results = new ArrayList<>();
     }
 
@@ -23,6 +37,7 @@ public class Reel {
             results.add(gameMode.getNextValues().get(reelNumber));
             // System.out.println(" " + gameMode.getNextValues().get(reelNumber));
         }
+        lastResult = results.get(results.size()-1);
         reelListener.onReelFinished(this);
     }
 

@@ -9,11 +9,17 @@ public class ReelManager implements IReelListener{
     private List<Reel> reels;
     private List<Reel> spinningReels;
     private List<Integer> reelSize;
+    private List<Integer> results;
     private IReelManagerListener reelManagerListener;
+
+    public List<Integer> getResults() {
+        return results;
+    }
 
     public ReelManager(GameMode gameMode, int qty){
         reels = new ArrayList<>();
         spinningReels = new ArrayList<>();
+        results = new ArrayList<>();
         for(int i=0;i<qty;i++) {
             Reel r = new Reel(gameMode, i);
             r.setListener(this);
@@ -31,6 +37,7 @@ public class ReelManager implements IReelListener{
 
     @Override
     public void onReelFinished(Reel reel){
+        results.add(reel.getLastResult());
         spinningReels.remove(reel);
         if(spinningReels.size()==0){
             reelManagerListener.onReelsFinished();

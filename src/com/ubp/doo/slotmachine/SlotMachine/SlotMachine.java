@@ -79,7 +79,7 @@ public class SlotMachine implements IReelManagerListener {
     }
     
     public void showResult(){
-        
+        System.out.println("Resultado: " + reelManager.getResults());
     }
     
     private void setGameMode(){
