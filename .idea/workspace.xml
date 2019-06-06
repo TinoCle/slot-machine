@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea15c740-f6cd-4b6d-8b89-87ea93960632" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../ubpslotmachineui/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ubpslotmachineui/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ubpslotmachineui/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ubpslotmachineui/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ubpslotmachineui/ubpslotmachineui.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/BetManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/BetManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/settings/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/settings/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/DisplayView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/DisplayView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/GameModeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/GameModeView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/MachineView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/MachineView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/slot-machine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/slot-machine.iml" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/ubpslotmachineui/src/slotmachine/ui/view/DisplayView.java" beforeDir="false" afterPath="$USER_HOME$/Downloads/ubpslotmachineui/src/slotmachine/ui/view/DisplayView.java" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/ubpslotmachineui/src/slotmachine/ui/view/GameModeView.java" beforeDir="false" afterPath="$USER_HOME$/Downloads/ubpslotmachineui/src/slotmachine/ui/view/GameModeView.java" afterDir="false" />
+      <change beforePath="$USER_HOME$/Downloads/ubpslotmachineui/src/slotmachine/ui/view/MachineView.java" beforeDir="false" afterPath="$USER_HOME$/Downloads/ubpslotmachineui/src/slotmachine/ui/view/MachineView.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,12 +25,38 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="144" column="34" selection-start-line="144" selection-start-column="34" selection-end-line="144" selection-end-column="34" />
+            <state relative-caret-position="-1323">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#1393#1394#0" expanded="true" />
                 <element signature="e#1428#1429#0" expanded="true" />
                 <element signature="method#loadConfiguration#0;class#SlotMachine#0" />
+                <element signature="e#3495#3682#0" expanded="true" />
+                <element signature="e#3681#3682#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/settings/Settings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-435">
+              <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#453#454#0" expanded="true" />
+                <element signature="e#484#485#0" expanded="true" />
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#545#546#0" expanded="true" />
+                <element signature="e#586#587#0" expanded="true" />
+                <element signature="e#626#627#0" expanded="true" />
+                <element signature="e#663#664#0" expanded="true" />
+                <element signature="e#699#700#0" expanded="true" />
+                <element signature="e#734#735#0" expanded="true" />
+                <element signature="e#765#766#0" expanded="true" />
+                <element signature="e#798#799#0" expanded="true" />
+                <element signature="e#827#828#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,11 +65,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/BetManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="50" column="34" lean-forward="true" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+            <state relative-caret-position="1080">
+              <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
               <folding>
-                <element signature="e#1459#1460#0" expanded="true" />
-                <element signature="e#1478#1479#0" expanded="true" />
                 <element signature="method#getResult#0;class#BetManager#0" />
               </folding>
             </state>
@@ -60,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -135,7 +153,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,36 +160,12 @@
               <item name="slot-machine" type="b2602c69:ProjectViewProjectNode" />
               <item name="slot-machine" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="slot-machine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slot-machine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="slot-machine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slot-machine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="slotmachine" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="slot-machine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slot-machine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="slotmachine" type="462c0819:PsiDirectoryNode" />
-              <item name="coin_related" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="slot-machine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slot-machine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="slotmachine" type="462c0819:PsiDirectoryNode" />
-              <item name="SlotMachine" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -183,7 +176,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/ubpslotmachineui" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -213,22 +206,6 @@
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -316,6 +293,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
@@ -378,10 +371,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1366" height="743" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3239017" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3237519" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -390,7 +383,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32931727" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49967846" weight="0.51302934" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49967846" weight="0.51282054" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -584,41 +577,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.base/java/util/HashMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="468" column="59" selection-start-line="468" selection-start-column="59" selection-end-line="468" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.base/java/util/List.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/MachineView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/GameModeView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.base/java/util/HashMap.class" />
+    <entry file="file://$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/Main.java" />
+    <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.base/java/util/List.class" />
+    <entry file="file://$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/MachineView.java" />
+    <entry file="file://$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/GameModeView.java" />
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/ReelManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -640,16 +603,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/BetManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="1080">
+          <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+          <folding>
+            <element signature="method#getResult#0;class#BetManager#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/settings/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
+        <state relative-caret-position="-435">
           <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -665,31 +631,27 @@
             <element signature="e#765#766#0" expanded="true" />
             <element signature="e#798#799#0" expanded="true" />
             <element signature="e#827#828#0" expanded="true" />
-            <element signature="method#LoadSettings#0;class#Settings#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/BetManager.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="50" column="34" lean-forward="true" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-          <folding>
-            <element signature="e#1459#1460#0" expanded="true" />
-            <element signature="e#1478#1479#0" expanded="true" />
-            <element signature="method#getResult#0;class#BetManager#0" />
-          </folding>
+        <state relative-caret-position="216">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="144" column="34" selection-start-line="144" selection-start-column="34" selection-end-line="144" selection-end-column="34" />
+        <state relative-caret-position="-1323">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#1393#1394#0" expanded="true" />
             <element signature="e#1428#1429#0" expanded="true" />
             <element signature="method#loadConfiguration#0;class#SlotMachine#0" />
+            <element signature="e#3495#3682#0" expanded="true" />
+            <element signature="e#3681#3682#0" expanded="true" />
           </folding>
         </state>
       </provider>
