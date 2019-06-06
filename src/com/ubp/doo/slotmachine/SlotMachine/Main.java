@@ -19,5 +19,9 @@ public class Main {
         slotMachine.betManager.setText("ASDASDASD");
 
 
+        slotMachine.play();
+        slotMachine.showResult();
+        slotMachine.play();
+        slotMachine.showResult();
     }
 }

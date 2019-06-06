@@ -1,6 +1,7 @@
 package com.ubp.doo.slotmachine.settings;
 
 import java.io.*;
+import java.util.List;
 import java.util.Properties;
 
 // Se aplica el patrón singleton
@@ -11,6 +12,7 @@ public class Settings {
     private int sequencesQuantity;
     private int reelsQuantity;
     private String reelSize;
+    private String values;
     private Properties properties;
 
     public String getGameMode() {
@@ -33,6 +35,10 @@ public class Settings {
         return reelSize;
     }
 
+    public String getValues() {
+        return values;
+    }
+
     private Settings() {
         properties = new Properties();
         LoadSettings();
@@ -48,6 +54,8 @@ public class Settings {
     public void SaveSettings() {
         try {
             OutputStream output = new FileOutputStream(System.getProperty("user.dir") + "config.properties");
+<<<<<<< HEAD
+=======
 
             gameMode = "random";
             dropBox = 1000;
@@ -62,11 +70,13 @@ public class Settings {
                 }
             }
 
+>>>>>>> e1f3c3976dc88d4f202356b6858dc914411b8b06
             properties.setProperty("GameMode", gameMode);
             properties.setProperty("DropBox", Integer.toString(dropBox));
             properties.setProperty("SequencesQuantity", Integer.toString(sequencesQuantity));
             properties.setProperty("ReelsQuantity", Integer.toString(reelsQuantity));
             properties.setProperty("ReelSize", reelSize);
+            properties.setProperty("Values",values);
             properties.store(output, null);
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
@@ -88,7 +98,21 @@ public class Settings {
             sequencesQuantity = Integer.parseInt(properties.getProperty("SequencesQuantity"));
             reelsQuantity = Integer.parseInt(properties.getProperty("ReelsQuantity"));
             reelSize = properties.getProperty("ReelSize");
+            values = properties.getProperty("Values");
         } catch (FileNotFoundException e) {
+            gameMode = "random";
+            dropBox = 1000;
+            sequencesQuantity = 10;
+            reelsQuantity = 3;
+            reelSize = "";
+            for (int i = 0; i < reelsQuantity; i++) {
+                if (i == reelsQuantity - 1) {
+                    reelSize += ((int) (Math.random() * 12) + 1);
+                } else {
+                    reelSize += ((int) (Math.random() * 12) + 1) + ",";
+                }
+            }
+            values = "uva,cereza,manzana,banana,frutilla,durazno,naranaja,sandia,anana,pera,limon";
             SaveSettings();
         } catch (IOException e) {
             e.printStackTrace();

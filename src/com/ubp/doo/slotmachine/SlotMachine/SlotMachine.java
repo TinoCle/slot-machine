@@ -80,7 +80,7 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
             gameMode = GameModeFactory.getGameMode(new SequenceFactory(reelSize, settings.getSequencesQuantity(), randomize));
         }
 
-        reelManager = new ReelManager(gameMode, reelQuantity);
+        reelManager = new ReelManager(reelSize);
         reelManager.setListener(this);
 
         betManager = new BetManager(settings.getDropBox());
@@ -98,7 +98,8 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
     public void play() {
         if (betManager.getBet() >= 5){
             //play
-            reelManager.spinReels();
+            //reelManager.spinReels();
+            reelManager.spinReels(gameMode.getNextValues());
             iDisplayHandler.setText("AAAAAAA");
             this.showResult();
             betManager.sendToDropbox();

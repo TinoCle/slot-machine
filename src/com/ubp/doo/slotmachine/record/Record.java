@@ -1,8 +1,10 @@
 package com.ubp.doo.slotmachine.record;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Record {
+
+public class Record implements Serializable{
     private int betAmount;
     private List<Integer> reelResults;
     private String gameResult;

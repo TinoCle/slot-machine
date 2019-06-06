@@ -1,5 +1,7 @@
 package com.ubp.doo.slotmachine.record;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecordManager implements java.io.Serializable {
@@ -7,16 +9,20 @@ public class RecordManager implements java.io.Serializable {
     RecordPersistance recordSaver;
 
     public RecordManager() {
-        //aca deberia leer de memoria persistente los records
-        records = recordSaver.Deserialize();
-
+        records = new ArrayList<>();
+        recordSaver = new RecordPersistance();
+        try {
+            records = recordSaver.Deserialize();
+        }
+        catch (Exception e) {
+            System.out.println("Error al cargar el archivo de records.");
+        }
     }
 
     public void saveRecord(int betAmount, List<Integer> reelsResult, String gameResult){
         Record record = new Record(betAmount, reelsResult, gameResult);
         records.add(record);
         recordSaver.Serialize(records);
-        //aca se ejecutaria la sentencia que lo guarda en memoria persistente
     }
 
     public List<Record> showRecord(){
@@ -24,10 +30,13 @@ public class RecordManager implements java.io.Serializable {
     }
 
     public void showRecords(){
-        System.out.println("Record nº\tBetAmount\tResult\tReels\n");
-        for (int i = 0; i < records.size(); i++) {
-            System.out.println(i+"\t"+records.get(i).getBetAmount()+"\t"+records.get(i).getGameResult()+"\t"+records.get(i).getReelResults()+"\n");
+        if (records.size() > 0) {
+            System.out.println("Record nº\tBetAmount\tResult\tReels");
+            for (int i = 0; i < records.size(); i++) {
+                System.out.println(i+"\t\t\t"+records.get(i).getBetAmount()+"\t\t\t"+records.get(i).getGameResult()+"\t"+records.get(i).getReelResults());
+            }
+        } else {
+            System.out.println("No hay records guardados.");
         }
     }
-
 }
