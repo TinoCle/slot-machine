@@ -142,6 +142,7 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
         if (result>0){
             this.iDisplayHandler.setText("GANASTE!!!");
             this.retrieve(result);
+            betManager.resetBet();
         }
         else if (result==-1){
             this.iDisplayHandler.setText("No hay dinero suficiente en el DropBox");
@@ -151,26 +152,6 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
             this.iDisplayHandler.setText("Perdiste");
             betManager.sendToDropbox();
         }
-
-
-        /*Map<Integer,Integer> frequency = new HashMap<>();
-        for(Integer tmp:reelManager.getResults())
-        {
-            Integer count = frequency.get(tmp);
-            if (count == null)
-                count = 0;
-            frequency.put(tmp,count + 1);
-        }
-        TreeMap<Integer,Integer> sorted = new TreeMap<>(frequency);
-        for (Map.Entry<Integer,Integer> tmp:sorted.entrySet()){
-            if (tmp.getKey()==0 && tmp.getValue()==3)
-                return betManager.getBet()*100;
-            else if (tmp.getValue()==3)
-                return betManager.getBet()*10;
-            else if (tmp.getValue()==2)
-                return betManager.getBet()*2;
-            else
-                return 0;*/
     }
 
     private void setGameMode(){

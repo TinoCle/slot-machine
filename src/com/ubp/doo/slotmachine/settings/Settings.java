@@ -66,41 +66,11 @@ public class Settings {
         } catch (IOException io) {
             io.printStackTrace();
         }
-
-
-        /*try {
-            OutputStream output = new FileOutputStream(System.getProperty("user.dir") + "config.properties");
-
-            gameMode = "random";
-            dropBox = 1000;
-            sequencesQuantity = 10;
-            reelsQuantity = 3;
-            reelSize = "";
-            for (int i = 0; i < reelsQuantity; i++) {
-                if (i == reelsQuantity - 1) {
-                    reelSize += ((int) (Math.random() * 12) + 1);
-                } else {
-                    reelSize += ((int) (Math.random() * 12) + 1) + ",";
-                }
-            }
-
-            properties.setProperty("GameMode", gameMode);
-            properties.setProperty("DropBox", Integer.toString(dropBox));
-            properties.setProperty("SequencesQuantity", Integer.toString(sequencesQuantity));
-            properties.setProperty("ReelsQuantity", Integer.toString(reelsQuantity));
-            properties.setProperty("ReelSize", reelSize);
-            properties.setProperty("Values",values);
-            properties.store(output, null);
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-        } catch (IOException io) {
-            io.printStackTrace();
-        }*/
     }
 
     public void LoadSettings() {
         try {
-            InputStream input = new FileInputStream(System.getProperty("user.dir") + "slot-machineconfig.properties");
+            InputStream input = new FileInputStream(System.getProperty("user.dir") + "config.properties");
 
             //TODO ver donde se guarda las settigs
             System.out.println(System.getProperty("user.dir") + "config.properties");
@@ -125,7 +95,7 @@ public class Settings {
                     reelSize += ((int) (Math.random() * 12) + 1) + ",";
                 }
             }
-            values = "uva,cereza,manzana,banana,frutilla,durazno,naranaja,sandia,anana,pera,limon";
+            values = "uva,cereza,manzana,banana,frutilla,durazno,naranaja,sandia,anana,pera,limon,kiwi";
             SaveSettings();
         } catch (IOException e) {
             e.printStackTrace();

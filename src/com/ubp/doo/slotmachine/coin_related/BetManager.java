@@ -47,6 +47,10 @@ public class BetManager implements IDisplayHandler {
         this.coinSlot.SetCoins(0);
     }
 
+    public void resetBet(){
+        this.coinSlot.SetCoins(0);
+    }
+
     public int getResult(List<String> result) {
         HashMap<String, Integer> frequency = new HashMap<>();
         for (String tmp : result) {
