@@ -15,12 +15,13 @@ public class Main {
         GameMode random = GameModeFactory.getGameMode(new RandomFactory(reelSize, randomize));
         GameMode sequence = GameModeFactory.getGameMode(new SequenceFactory(reelSize, 10, randomize));
 
+/*
         for (int i = 0; i < 20; i++) {
             System.out.println(i+" "+random.getNextValues());
         }
         System.out.println("----------------------------------------------------");
         for (int i = 0; i < 20; i++) {
             System.out.println(i+" "+sequence.getNextValues());
-        }
+        }*/
     }
 }

@@ -1,43 +1,31 @@
 package com.ubp.doo.slotmachine.reel;
-import com.ubp.doo.slotmachine.gamemode.GameMode;
+
+import com.ubp.doo.slotmachine.settings.Settings;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Reel {
-    private int spins;
-    private int reelNumber;
-    private List<Integer> results;
-    private int lastResult;
-    private GameMode gameMode;
+    private List<String> values;
+    private String result;
     private IReelListener reelListener;
+    private Settings settings;
 
-    public int getReelNumber() {
-        return reelNumber;
+    public String getResult() {
+        return result;
     }
 
-    public List<Integer> getResults() {
-        return results;
-    }
-
-    public int getLastResult() {
-        return lastResult;
-    }
-
-    public Reel(GameMode gameMode, int reelNumber){
-        this.gameMode = gameMode;
-        this.reelNumber = reelNumber;
-        spins = 0;
-        results = new ArrayList<>();
-    }
-
-    public void spin(int spins){
-        this.spins = spins;
-        for(int i=0;i<spins;i++){
-            results.add(gameMode.getNextValues().get(reelNumber));
-            // System.out.println(" " + gameMode.getNextValues().get(reelNumber));
+    public Reel(int reelSize){
+        settings = Settings.getInstance();
+        values = new ArrayList<>();
+        for(int i=0;i<reelSize;i++){
+            String v = settings.getValues().split(",")[i];
+            values.add(v);
         }
-        lastResult = results.get(results.size()-1);
+    }
+
+    public void spin(int endPosition){
+        result = values.get(endPosition);
         reelListener.onReelFinished(this);
     }
 
@@ -45,3 +33,4 @@ public class Reel {
         this.reelListener = reelListener;
     }
 }
+
