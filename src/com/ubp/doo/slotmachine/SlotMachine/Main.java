@@ -5,5 +5,7 @@ public class Main {
         SlotMachine slotMachine = SlotMachine.getInstance();
         slotMachine.play();
         slotMachine.showResult();
+        slotMachine.play();
+        slotMachine.showResult();
     }
 }

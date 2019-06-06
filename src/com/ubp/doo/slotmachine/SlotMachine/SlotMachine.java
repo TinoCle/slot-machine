@@ -63,7 +63,7 @@ public class SlotMachine implements IReelManagerListener {
             gameMode = GameModeFactory.getGameMode(new SequenceFactory(reelSize, settings.getSequencesQuantity(), randomize));
         }
 
-        reelManager = new ReelManager(gameMode, reelQuantity);
+        reelManager = new ReelManager(reelSize);
         reelManager.setListener(this);
 
         dropBox = new DropBox(settings.getDropBox());
@@ -75,11 +75,11 @@ public class SlotMachine implements IReelManagerListener {
     }
     
     public void play(){
-        reelManager.spinReels();
+        reelManager.spinReels(gameMode.getNextValues());
     }
     
     public void showResult(){
-        System.out.println("Resultado: " + reelManager.getResults());
+        System.out.println("Resultado de reels: "+reelManager.getResults());
     }
     
     private void setGameMode(){
