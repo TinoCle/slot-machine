@@ -18,8 +18,6 @@ public class Main {
 
         slotMachine.betManager.setText("ASDASDASD");
 
-        slotMachine.play();
-        slotMachine.showResult();
 
     }
 }

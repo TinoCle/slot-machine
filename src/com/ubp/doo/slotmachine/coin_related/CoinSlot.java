@@ -5,11 +5,11 @@ import slotmachine.ui.data.ICredit;
 public class CoinSlot {
     private int coinsInserted;
 
-    public int getCoinInserted() {
+    public int getCoinsInserted() {
         return coinsInserted;
     }
 
-    public void setCoinInserted(int coinInserted) {
+    public void setCoinsInserted(int coinInserted) {
         this.coinsInserted = coinInserted;
     }
 
@@ -17,8 +17,8 @@ public class CoinSlot {
         coinsInserted = 0;
     }
 
-    public void AddCoin(ICredit amount){
-         coinsInserted+=amount.getValue();
+    public void AddCoin(int amount){
+         coinsInserted+=amount;
     }
 
     public void SetCoins(int amount){

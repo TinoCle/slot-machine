@@ -11,6 +11,6 @@ public class Main {
 
 
 
-        System.out.println("La cantidad de fichas insertadas es: " + coinSlot.getCoinInserted());
+        System.out.println("La cantidad de fichas insertadas es: " + coinSlot.getCoinsInserted());
     }
 }

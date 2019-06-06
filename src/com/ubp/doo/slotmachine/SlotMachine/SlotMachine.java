@@ -13,10 +13,14 @@ import slotmachine.ui.handler.IPlayHandler;
 import slotmachine.ui.handler.IPrizeHandler;
 import slotmachine.ui.handler.ICreditHandler;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
+
+
+/*
+    3 iguales = *10
+    2 iguales = *2
+    3 ceros = *100
+*/
 
 public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandler, IPrizeHandler, IReelManagerListener {
     private ReelManager reelManager;
@@ -97,6 +101,7 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
             reelManager.spinReels();
             iDisplayHandler.setText("AAAAAAA");
             this.showResult();
+            betManager.sendToDropbox();
         }
         else{
             iDisplayHandler.setText("Cantidad Insuficiente de Monedas");
@@ -134,6 +139,35 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
 
     public void showResult(){
         System.out.println("Resultado: " + reelManager.getResults());
+        int result = betManager.getResult(reelManager.getResults());
+        System.out.println("Result:"+result);
+        if (result>0){
+            this.iDisplayHandler.setText("GANASTE!!!");
+            this.retrieve(result);
+        }
+        else {
+            this.iDisplayHandler.setText("Perdiste");
+        }
+
+
+        /*Map<Integer,Integer> frequency = new HashMap<>();
+        for(Integer tmp:reelManager.getResults())
+        {
+            Integer count = frequency.get(tmp);
+            if (count == null)
+                count = 0;
+            frequency.put(tmp,count + 1);
+        }
+        TreeMap<Integer,Integer> sorted = new TreeMap<>(frequency);
+        for (Map.Entry<Integer,Integer> tmp:sorted.entrySet()){
+            if (tmp.getKey()==0 && tmp.getValue()==3)
+                return betManager.getBet()*100;
+            else if (tmp.getValue()==3)
+                return betManager.getBet()*10;
+            else if (tmp.getValue()==2)
+                return betManager.getBet()*2;
+            else
+                return 0;*/
     }
 
     private void setGameMode(){

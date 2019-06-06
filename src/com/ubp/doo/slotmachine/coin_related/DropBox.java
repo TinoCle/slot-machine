@@ -7,7 +7,7 @@ public class DropBox{
         totalCoin = storedCoin;
     }
 
-    public void setBet(int coin){
+    public void saveCoins(int coin){
         totalCoin += coin;
     }
 
