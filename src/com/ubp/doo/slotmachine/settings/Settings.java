@@ -12,6 +12,7 @@ public class Settings {
     private int reelsQuantity;
     private String reelSize;
     private Properties properties;
+    private String fileName;
 
     public String getGameMode() {
         return gameMode;
@@ -36,6 +37,7 @@ public class Settings {
     private Settings() {
         properties = new Properties();
         LoadSettings();
+        fileName = "\\config.properties";
     }
 
     public static Settings getInstance() {
@@ -47,7 +49,7 @@ public class Settings {
 
     public void SaveSettings() {
         try {
-            OutputStream output = new FileOutputStream(System.getProperty("user.dir") + "config.properties");
+            OutputStream output = new FileOutputStream(System.getProperty("user.dir") + fileName);
 
             gameMode = "random";
             dropBox = 1000;
@@ -77,10 +79,10 @@ public class Settings {
 
     public void LoadSettings() {
         try {
-            InputStream input = new FileInputStream(System.getProperty("user.dir") + "config.properties");
+            InputStream input = new FileInputStream(System.getProperty("user.dir") + fileName);
 
             //TODO ver donde se guarda las settigs
-            System.out.println(System.getProperty("user.dir") + "config.properties");
+            System.out.println(System.getProperty("user.dir") + fileName);
 
             properties.load(input);
             gameMode = properties.getProperty("GameMode");

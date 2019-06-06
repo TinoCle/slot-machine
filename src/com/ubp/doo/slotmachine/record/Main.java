@@ -8,6 +8,7 @@ public class Main {
         RecordManager recordManager = new RecordManager();
         //Leo los records de entrada, me va a decir que no hay nada
         recordManager.showRecords();
+        System.out.println(System.getProperty("user.dir"));
         //Creo un record y lo guardo
         List<Integer> resultados = new ArrayList<>();
         resultados.add(1);

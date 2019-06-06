@@ -7,7 +7,7 @@ public class RecordPersistance {
     private String fileName;
 
     public RecordPersistance() {
-        fileName = "/records.dat";
+        fileName = "\\records.dat";
     }
 
     public void Serialize(List<Record> records) {
