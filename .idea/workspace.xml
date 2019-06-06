@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/Record.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordPersistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordPersistance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/IReelListener.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/Reel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/Reel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/ReelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/ReelManager.java" afterDir="false" />
@@ -24,111 +25,19 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/Reel.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="6">
-              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#358#359#0" expanded="true" />
-                <element signature="e#387#388#0" expanded="true" />
-=======
-            <state relative-caret-position="432">
-              <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
->>>>>>> e1f3c3976dc88d4f202356b6858dc914411b8b06
-                <element signature="e#1152#1153#0" expanded="true" />
-                <element signature="e#1200#1201#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/ReelManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="-556">
-              <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#425#426#0" expanded="true" />
-                <element signature="e#455#456#0" expanded="true" />
-              </folding>
-=======
-            <state relative-caret-position="-558">
-              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="37" />
->>>>>>> e1f3c3976dc88d4f202356b6858dc914411b8b06
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/Record.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="78">
-              <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
-              <folding>
-                <element signature="e#962#963#0" expanded="true" />
-                <element signature="e#997#998#0" expanded="true" />
-                <element signature="e#2506#2507#0" expanded="true" />
-                <element signature="e#2576#2577#0" expanded="true" />
-                <element signature="e#2605#2606#0" expanded="true" />
-                <element signature="e#2644#2645#0" expanded="true" />
-                <element signature="e#2741#2742#0" expanded="true" />
-                <element signature="e#2762#2763#0" expanded="true" />
-=======
-            <state relative-caret-position="97">
+            <state relative-caret-position="324">
               <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-              <folding>
-                <element signature="e#365#366#0" expanded="true" />
-                <element signature="e#397#398#0" expanded="true" />
->>>>>>> e1f3c3976dc88d4f202356b6858dc914411b8b06
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/IReelManagerListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/IReelListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordManager.java">
+        <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="216">
-              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-=======
-            <state relative-caret-position="246">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordPersistance.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
+            <state relative-caret-position="108">
               <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
->>>>>>> e1f3c3976dc88d4f202356b6858dc914411b8b06
             </state>
           </provider>
         </entry>
@@ -176,23 +85,13 @@
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/safasf.form" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/Main.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/Main.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/IReelListener.java" />
-        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/IReelManagerListener.java" />
-        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/settings/Settings.java" />
-=======
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java" />
->>>>>>> e1f3c3976dc88d4f202356b6858dc914411b8b06
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/Reel.java" />
-        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/Main.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/ReelManager.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java" />
-=======
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/settings/Settings.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/Record.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordManager.java" />
->>>>>>> e1f3c3976dc88d4f202356b6858dc914411b8b06
+        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordPersistance.java" />
       </list>
     </option>
   </component>
@@ -209,7 +108,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -229,41 +127,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="slotmachine" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="slot-machine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slot-machine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="slotmachine" type="462c0819:PsiDirectoryNode" />
-              <item name="record" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="slot-machine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slot-machine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="slotmachine" type="462c0819:PsiDirectoryNode" />
-              <item name="reel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="slot-machine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slot-machine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="slotmachine" type="462c0819:PsiDirectoryNode" />
-              <item name="SlotMachine" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="slot-machine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slot-machine" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="slot-machine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -324,6 +192,20 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ubp.doo.slotmachine.SlotMachine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ubp.doo.slotmachine.record.Main" />
+      <module name="slot-machine" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ubp.doo.slotmachine.record.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -457,14 +339,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-<<<<<<< HEAD
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22919819" />
-=======
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
->>>>>>> e1f3c3976dc88d4f202356b6858dc914411b8b06
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -473,11 +350,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32931727" />
-<<<<<<< HEAD
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49967846" weight="0.4957265" />
-=======
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49967846" weight="0.39761093" />
->>>>>>> e1f3c3976dc88d4f202356b6858dc914411b8b06
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -485,7 +358,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50032157" side_tool="true" weight="0.27303755" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32931727" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -568,7 +441,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/safasf.java" />
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/Random.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="325">
           <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
           <folding>
             <element signature="e#313#314#0" expanded="true" />
@@ -577,42 +450,24 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/safasf.form" />
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/safasf.java" />
-=======
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/GameMode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="13" column="61" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="61" />
+        <state relative-caret-position="-1">
+          <caret line="14" column="72" lean-forward="true" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/Main.java">
+    <entry file="file://$PROJECT_DIR$/test/com/ubp/doo/slotmachine/gamemode/RandomTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="40" lean-forward="true" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        <state relative-caret-position="-224">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
->>>>>>> e1f3c3976dc88d4f202356b6858dc914411b8b06
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3859">
-          <caret line="718" column="10" selection-start-line="718" selection-start-column="10" selection-end-line="718" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/records.dat" />
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/settings/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -644,13 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordPersistance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/IReelListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
@@ -670,83 +518,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/settings/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1566">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/Reel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#1152#1153#0" expanded="true" />
-            <element signature="e#1200#1201#0" expanded="true" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="66" column="36" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="36" />
-          <folding>
-            <element signature="e#2506#2507#0" expanded="true" />
-            <element signature="e#2576#2577#0" expanded="true" />
->>>>>>> e1f3c3976dc88d4f202356b6858dc914411b8b06
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/ReelManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="-556">
-          <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-          </folding>
-=======
-        <state relative-caret-position="-558">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="37" />
->>>>>>> e1f3c3976dc88d4f202356b6858dc914411b8b06
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/Record.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="78">
-          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
-          <folding>
-            <element signature="e#962#963#0" expanded="true" />
-            <element signature="e#997#998#0" expanded="true" />
-            <element signature="e#2506#2507#0" expanded="true" />
-            <element signature="e#2576#2577#0" expanded="true" />
-            <element signature="e#2605#2606#0" expanded="true" />
-            <element signature="e#2644#2645#0" expanded="true" />
-            <element signature="e#2741#2742#0" expanded="true" />
-            <element signature="e#2762#2763#0" expanded="true" />
-=======
-        <state relative-caret-position="97">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding>
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
->>>>>>> e1f3c3976dc88d4f202356b6858dc914411b8b06
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/IReelManagerListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
@@ -756,13 +527,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordManager.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="216">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-=======
-        <state relative-caret-position="246">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
->>>>>>> e1f3c3976dc88d4f202356b6858dc914411b8b06
+        <state relative-caret-position="-108">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordPersistance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-567">
+          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="733" column="21" lean-forward="true" selection-start-line="733" selection-start-column="21" selection-end-line="733" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/Record.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
