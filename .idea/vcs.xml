@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/ubpslotmachine" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/ubpslotmachine" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../ubpslotmachineui" vcs="Git" />
   </component>
 </project>

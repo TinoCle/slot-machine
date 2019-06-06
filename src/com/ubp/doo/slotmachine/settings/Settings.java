@@ -54,8 +54,22 @@ public class Settings {
     public void SaveSettings() {
         try {
             OutputStream output = new FileOutputStream(System.getProperty("user.dir") + "config.properties");
-<<<<<<< HEAD
-=======
+            properties.setProperty("GameMode", gameMode);
+            properties.setProperty("DropBox", Integer.toString(dropBox));
+            properties.setProperty("SequencesQuantity", Integer.toString(sequencesQuantity));
+            properties.setProperty("ReelsQuantity", Integer.toString(reelsQuantity));
+            properties.setProperty("ReelSize", reelSize);
+            properties.setProperty("Values",values);
+            properties.store(output, null);
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        } catch (IOException io) {
+            io.printStackTrace();
+        }
+
+
+        /*try {
+            OutputStream output = new FileOutputStream(System.getProperty("user.dir") + "config.properties");
 
             gameMode = "random";
             dropBox = 1000;
@@ -70,7 +84,6 @@ public class Settings {
                 }
             }
 
->>>>>>> e1f3c3976dc88d4f202356b6858dc914411b8b06
             properties.setProperty("GameMode", gameMode);
             properties.setProperty("DropBox", Integer.toString(dropBox));
             properties.setProperty("SequencesQuantity", Integer.toString(sequencesQuantity));
@@ -82,12 +95,12 @@ public class Settings {
             System.out.println(e.getMessage());
         } catch (IOException io) {
             io.printStackTrace();
-        }
+        }*/
     }
 
     public void LoadSettings() {
         try {
-            InputStream input = new FileInputStream(System.getProperty("user.dir") + "config.properties");
+            InputStream input = new FileInputStream(System.getProperty("user.dir") + "slot-machineconfig.properties");
 
             //TODO ver donde se guarda las settigs
             System.out.println(System.getProperty("user.dir") + "config.properties");

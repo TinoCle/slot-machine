@@ -72,7 +72,6 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
             String valor = settings.getReelSize().split(",")[i];
             reelSize.add(Integer.parseInt(valor));
         }
-
         if(settings.getGameMode() == "random"){
             gameMode = GameModeFactory.getGameMode(new RandomFactory(reelSize, randomize));
         }
@@ -84,7 +83,6 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
         reelManager.setListener(this);
 
         betManager = new BetManager(settings.getDropBox());
-        //dropBox = new DropBox(settings.getDropBox());
     }
 
     @Override
@@ -102,7 +100,6 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
             reelManager.spinReels(gameMode.getNextValues());
             iDisplayHandler.setText("AAAAAAA");
             this.showResult();
-            betManager.sendToDropbox();
         }
         else{
             iDisplayHandler.setText("Cantidad Insuficiente de Monedas");
@@ -146,8 +143,13 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
             this.iDisplayHandler.setText("GANASTE!!!");
             this.retrieve(result);
         }
+        else if (result==-1){
+            this.iDisplayHandler.setText("No hay dinero suficiente en el DropBox");
+            this.retrieve(betManager.getBet());
+        }
         else {
             this.iDisplayHandler.setText("Perdiste");
+            betManager.sendToDropbox();
         }
 
 

@@ -47,33 +47,51 @@ public class BetManager implements IDisplayHandler {
         this.coinSlot.SetCoins(0);
     }
 
-    public int getResult(List<Integer> result) {
-        HashMap<Integer, Integer> frequency = new HashMap<>();
-        for (Integer tmp : result) {
+    public int getResult(List<String> result) {
+        HashMap<String, Integer> frequency = new HashMap<>();
+        for (String tmp : result) {
             Integer count = frequency.get(tmp);
             if (count == null)
                 count = 0;
             frequency.put(tmp, count + 1);
         }
         int maxFreq = Collections.max(frequency.values());
-        int key = 0;
-        for (Map.Entry<Integer, Integer> entry : frequency.entrySet()) {
+        System.out.println(frequency);
+        String key="";
+        for (Map.Entry<String, Integer> entry : frequency.entrySet()) {
             if (entry.getValue() == maxFreq) {
                 key = entry.getKey();
                 break;
             }
         }
-        System.out.println("Key:"+key+" Freq:"+maxFreq);
+        System.out.println("Key:"+ key +" Freq:"+maxFreq);
         // si salieron 3 ceros
-        if (key == 0 && maxFreq == 3)
-            return this.getBet() * 100;
+        if (key == "banana" && maxFreq == 3) {
+            //si no hay plata en el dropbox
+            if (this.dropBox.getTotalCoin() < this.getBet() * 100) {
+                return -1;
+            } else {
+                return this.getBet() * 100;
+            }
+        }
         // si salio 3 veces otro numero
-        else if (maxFreq == 3)
-            return this.getBet() * 10;
+        else if (maxFreq == 3) {
+            if (this.dropBox.getTotalCoin() < this.getBet() * 10) {
+                return -1;
+            } else {
+                return this.getBet() * 10;
+            }
+        }
         // si salio 2 veces otro numero
-        else if (maxFreq == 2)
-            return this.getBet() * 2;
+        else if (maxFreq == 2) {
+            if (this.dropBox.getTotalCoin() < this.getBet() * 2) {
+                return -1;
+            } else {
+                return this.getBet() * 2;
+            }
+        }
         else
             return 0;
     }
+
 }
