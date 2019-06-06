@@ -1,19 +1,28 @@
 package com.ubp.doo.slotmachine.reel;
 
+import com.ubp.doo.slotmachine.gamemode.GameMode;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReelManager {
-    List<Reel> reels;
-    List<Integer> reelSize;
+public class ReelManager implements IReelListener{
+    private List<Reel> reels;
+    private List<Reel> spinningReels;
+    private List<Integer> reelSize;
+    private List<Integer> results;
+    private IReelManagerListener reelManagerListener;
 
-    public ReelManager(List<Integer> reelSize, int qty){
-        //TODO:
-        //Acá ReelManager "hace girar" los reels y les da su valor random
+    public List<Integer> getResults() {
+        return results;
+    }
+
+    public ReelManager(GameMode gameMode, int qty){
         reels = new ArrayList<>();
+        spinningReels = new ArrayList<>();
+        results = new ArrayList<>();
         for(int i=0;i<qty;i++) {
-            //Acá llamar al otro constructor y darle el valor a guardar.
-            Reel r = new Reel();
+            Reel r = new Reel(gameMode, i);
+            r.setListener(this);
             reels.add(r);
         }
     }
@@ -22,15 +31,20 @@ public class ReelManager {
         System.out.println("Spining Reels\n");
         for (int i = 0; i < reels.size(); i++) {
             reels.get(i).spin(10);
+            spinningReels.add(reels.get(i));
         }
     }
 
-    //metodo de testing, borrar
-    public void tellMeTheTruth() {
-        System.out.println("Reel results:\n");
-        for (int i = 0; i < reels.size(); i++) {
-            System.out.println("Reel " + i + ": " + reels.get(i).getValue() + "\n");
+    @Override
+    public void onReelFinished(Reel reel){
+        results.add(reel.getLastResult());
+        spinningReels.remove(reel);
+        if(spinningReels.size()==0){
+            reelManagerListener.onReelsFinished();
         }
     }
 
+    public void setListener(IReelManagerListener reelManagerListener){
+        this.reelManagerListener = reelManagerListener;
+    }
 }

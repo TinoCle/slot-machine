@@ -1,6 +1,7 @@
 package com.ubp.doo.slotmachine.SlotMachine;
 
 import com.ubp.doo.slotmachine.gamemode.*;
+import com.ubp.doo.slotmachine.reel.IReelManagerListener;
 import com.ubp.doo.slotmachine.reel.ReelManager;
 import com.ubp.doo.slotmachine.record.RecordManager;
 import com.ubp.doo.slotmachine.coin_related.CoinSlot;
@@ -12,7 +13,7 @@ import com.ubp.doo.slotmachine.settings.Settings;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SlotMachine {
+public class SlotMachine implements IReelManagerListener {
     private ReelManager reelManager;
     private RecordManager recordManager;
     private CoinSlot coinSlot;
@@ -25,9 +26,9 @@ public class SlotMachine {
     private static SlotMachine instance;
     
     private SlotMachine(){
-        
+        loadConfiguration();
     }
-    
+
     public static SlotMachine getInstance(){
         if(instance==null){
             instance = new SlotMachine();
@@ -56,27 +57,29 @@ public class SlotMachine {
         }
 
         if(settings.getGameMode() == "random"){
-            GameMode random = GameModeFactory.getGameMode(new RandomFactory(reelSize, randomize));
+            gameMode = GameModeFactory.getGameMode(new RandomFactory(reelSize, randomize));
         }
         else{
-            GameMode sequence = GameModeFactory.getGameMode(new SequenceFactory(reelSize, settings.getSequencesQuantity(), randomize));
+            gameMode = GameModeFactory.getGameMode(new SequenceFactory(reelSize, settings.getSequencesQuantity(), randomize));
         }
 
-        reelManager = new ReelManager(reelSize, reelQuantity);
+        reelManager = new ReelManager(gameMode, reelQuantity);
+        reelManager.setListener(this);
 
         dropBox = new DropBox(settings.getDropBox());
     }
-    
-    public void initComponents(){
-        
+
+    @Override
+    public void onReelsFinished(){
+        System.out.println("Los reels han terminado de girar");
     }
     
     public void play(){
-
+        reelManager.spinReels();
     }
     
     public void showResult(){
-        
+        System.out.println("Resultado: " + reelManager.getResults());
     }
     
     private void setGameMode(){
