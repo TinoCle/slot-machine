@@ -1,6 +1,7 @@
 package com.ubp.doo.slotmachine.settings;
 
 import java.io.*;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Properties;
 
@@ -17,6 +18,9 @@ public class Settings {
 
     public String getGameMode() {
         return gameMode;
+    }
+    public void setGameMode(String gameMode){
+        this.gameMode=gameMode;
     }
 
     public int getDropBox() {
@@ -53,7 +57,7 @@ public class Settings {
 
     public void SaveSettings() {
         try {
-            OutputStream output = new FileOutputStream(System.getProperty("user.dir") + "config.properties");
+            OutputStream output = new FileOutputStream(System.getProperty("user.dir") + "/config.properties");
             properties.setProperty("GameMode", gameMode);
             properties.setProperty("DropBox", Integer.toString(dropBox));
             properties.setProperty("SequencesQuantity", Integer.toString(sequencesQuantity));
@@ -70,10 +74,10 @@ public class Settings {
 
     public void LoadSettings() {
         try {
-            InputStream input = new FileInputStream(System.getProperty("user.dir") + "config.properties");
+            InputStream input = new FileInputStream(System.getProperty("user.dir") + "/config.properties");
 
             //TODO ver donde se guarda las settigs
-            System.out.println(System.getProperty("user.dir") + "config.properties");
+            System.out.println(System.getProperty("user.dir") + "/config.properties");
 
             properties.load(input);
             gameMode = properties.getProperty("GameMode");

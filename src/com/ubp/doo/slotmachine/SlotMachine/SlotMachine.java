@@ -8,13 +8,9 @@ import com.ubp.doo.slotmachine.record.RecordManager;
 import com.ubp.doo.slotmachine.display.Display;
 import com.ubp.doo.slotmachine.settings.Settings;
 import slotmachine.ui.data.ICredit;
-import slotmachine.ui.handler.IDisplayHandler;
-import slotmachine.ui.handler.IPlayHandler;
-import slotmachine.ui.handler.IPrizeHandler;
-import slotmachine.ui.handler.ICreditHandler;
+import slotmachine.ui.handler.*;
 
 import java.util.*;
-
 
 /*
     3 iguales = *10
@@ -22,7 +18,8 @@ import java.util.*;
     3 ceros = *100
 */
 
-public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandler, IPrizeHandler, IReelManagerListener {
+public class SlotMachine implements ICreditHandler, IDisplayHandler, IGameModeHandler, IPlayHandler,
+                                    IPrizeHandler, IReelManagerListener {
     private ReelManager reelManager;
     private RecordManager recordManager;
     public BetManager betManager;
@@ -38,22 +35,25 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
 
     private IDisplayHandler iDisplayHandler;
     private IPrizeHandler iPrizeHandler;
+    private IGameModeHandler iGameModeHandler;
     private static SlotMachine instance;
 
-    private int betAmount;
+    private IRandomize randomize = new Randomize();
+    private List<Integer> reelSize = new ArrayList<>();
+    private int reelQuantity;
 
-    private SlotMachine(){
+    private SlotMachine() {
         loadConfiguration();
     }
 
-    public static SlotMachine getInstance(){
-        if(instance==null){
+    public static SlotMachine getInstance() {
+        if (instance == null) {
             instance = new SlotMachine();
         }
         return instance;
     }
 
-    public void loadConfiguration(){
+    public void loadConfiguration() {
         Settings settings = Settings.getInstance();
 
         //TODO comprobar que las settings esten
@@ -63,22 +63,21 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
         System.out.println("ReelQuantity: " + settings.getReelsQuantity());
         System.out.println("SequenceQuantity: " + settings.getSequencesQuantity());*/
 
-        IRandomize randomize = new Randomize();
-        List<Integer> reelSize = new ArrayList<>();
+        randomize = new Randomize();
+        reelSize = new ArrayList<>();
+        reelQuantity = settings.getReelsQuantity();
 
-        int reelQuantity = settings.getReelsQuantity();
-
-        for(int i=0;i<reelQuantity;i++){
+        for (int i = 0; i < reelQuantity; i++) {
             String valor = settings.getReelSize().split(",")[i];
             reelSize.add(Integer.parseInt(valor));
         }
-        if(settings.getGameMode() == "random"){
+        System.out.println("Settings Cargadas:" + settings.getGameMode());
+        //if (settings.getGameMode() == "random") {
+        if (settings.getGameMode().equals("random")){
             gameMode = GameModeFactory.getGameMode(new RandomFactory(reelSize, randomize));
-        }
-        else{
+        } else {
             gameMode = GameModeFactory.getGameMode(new SequenceFactory(reelSize, settings.getSequencesQuantity(), randomize));
         }
-
         reelManager = new ReelManager(reelSize);
         reelManager.setListener(this);
 
@@ -86,22 +85,18 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
     }
 
     @Override
-    public void onReelsFinished(){
+    public void onReelsFinished() {
         System.out.println("Los reels han terminado de girar");
     }
-
 
     //Funcion que se dispara cuando se presiona el boton Play
     @Override
     public void play() {
-        if (betManager.getBet() >= 5){
-            //play
-            //reelManager.spinReels();
+        if (betManager.getBet() >= 5) {
             reelManager.spinReels(gameMode.getNextValues());
             iDisplayHandler.setText("AAAAAAA");
             this.showResult();
-        }
-        else{
+        } else {
             iDisplayHandler.setText("Cantidad Insuficiente de Monedas");
             Timer timer = new Timer();
             timer.schedule(new TimerTask() {
@@ -119,48 +114,69 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
         iDisplayHandler.setText(text);
     }
 
-
+    //IPrizeHandler: para mostrar por PayoutTray que ganó
     @Override
     public void retrieve(int prize) {
         iDisplayHandler.setText("Prize: " + prize);
         iPrizeHandler.retrieve(prize);
     }
 
-    public void setDisplayHander(IDisplayHandler displayHandler){
+    public void setDisplayHander(IDisplayHandler displayHandler) {
         this.iDisplayHandler = displayHandler;
         betManager.setiDisplayHandler(displayHandler);
     }
 
-    public void setiPrizeHandler (IPrizeHandler iPrizeHandler){
+    public void setiPrizeHandler(IPrizeHandler iPrizeHandler) {
         this.iPrizeHandler = iPrizeHandler;
     }
 
-    public void showResult(){
+    private void showResult() {
         System.out.println("Resultado: " + reelManager.getResults());
         int result = betManager.getResult(reelManager.getResults());
-        System.out.println("Result:"+result);
-        if (result>0){
+        System.out.println("Result:" + result);
+        if (result > 0) {
             this.iDisplayHandler.setText("GANASTE!!!");
             this.retrieve(result);
             betManager.resetBet();
-        }
-        else if (result==-1){
+        } else if (result == -1) {
             this.iDisplayHandler.setText("No hay dinero suficiente en el DropBox");
             this.retrieve(betManager.getBet());
-        }
-        else {
+            betManager.resetBet();
+        } else {
             this.iDisplayHandler.setText("Perdiste");
             betManager.sendToDropbox();
+            this.retrieve(0);
         }
-    }
-
-    private void setGameMode(){
-
+        iDisplayHandler.setText(Settings.getInstance().getGameMode());
     }
 
     @Override
     public void addCredit(ICredit credit) {
         betManager.addCoin(credit);
-        iDisplayHandler.setText("Bet: "+ betManager.getBet());
+        iDisplayHandler.setText("Bet: " + betManager.getBet());
+    }
+
+    //Change GameMode
+    @Override
+    public String change() {
+        Settings settings = Settings.getInstance();
+        if (settings.getGameMode().equals("random")) {
+            settings.setGameMode("sequence");
+            this.gameMode =  GameModeFactory.getGameMode(new SequenceFactory(reelSize, settings.getSequencesQuantity(), randomize));
+            return "Random";
+        } else {
+            settings.setGameMode("random");
+            this.gameMode = GameModeFactory.getGameMode(new RandomFactory(reelSize, randomize));
+            return "Sequence";
+        }
+    }
+
+    @Override
+    public String getMode() {
+        if (Settings.getInstance().getGameMode().equals("random")){
+            return "Sequence";
+        }
+        else
+            return "Random";
     }
 }
