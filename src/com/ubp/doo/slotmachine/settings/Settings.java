@@ -90,9 +90,9 @@ public class Settings {
             reelSize = "";
             for (int i = 0; i < reelsQuantity; i++) {
                 if (i == reelsQuantity - 1) {
-                    reelSize += ((int) (Math.random() * 12) + 1);
+                    reelSize += ((int) (Math.random() * 12) + 3);
                 } else {
-                    reelSize += ((int) (Math.random() * 12) + 1) + ",";
+                    reelSize += ((int) (Math.random() * 12) + 3) + ",";
                 }
             }
             values = "uva,cereza,manzana,banana,frutilla,durazno,naranaja,sandia,anana,pera,limon,kiwi";

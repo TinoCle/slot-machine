@@ -21,7 +21,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module" module-name="ubpslotmachineui" exported="" />
     <orderEntry type="module" module-name="ubpslotmachineui1" exported="" />
   </component>
 </module>

@@ -81,15 +81,12 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
         reelManager.setListener(this);
 
         betManager = new BetManager(settings.getDropBox());
-
-
     }
 
     @Override
     public void onReelsFinished(){
         System.out.println("Los reels han terminado de girar");
     }
-
 
     //Funcion que se dispara cuando se presiona el boton Play
     @Override
