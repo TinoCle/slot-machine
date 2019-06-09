@@ -69,33 +69,69 @@ public class BetManager implements IDisplayHandler {
             }
         }
         System.out.println("Key:"+ key +" Freq:"+maxFreq);
-        // si salieron 3 ceros
-        if (key == "banana" && maxFreq == 3) {
-            //si no hay plata en el dropbox
-            if (this.dropBox.getTotalCoin() < this.getBet() * 100) {
-                return -1;
-            } else {
-                return this.getBet() * 100;
+
+        int reelsQuantity = result.size();
+
+        if(reelsQuantity==3){
+            if (key == "banana" && maxFreq == 3) {
+                //si no hay plata en el dropbox
+                if (this.dropBox.getTotalCoin() < this.getBet() * 100) {
+                    return -1;
+                } else {
+                    return this.getBet() * 100;
+                }
+            }
+            // si salio 3 veces otro numero
+            else if (maxFreq == 3) {
+                if (this.dropBox.getTotalCoin() < this.getBet() * 10) {
+                    return -1;
+                } else {
+                    return this.getBet() * 10;
+                }
+            }
+            // si salio 2 veces otro numero
+            else if (maxFreq == 2) {
+                if (this.dropBox.getTotalCoin() < this.getBet() * 2) {
+                    return -1;
+                } else {
+                    return this.getBet() * 2;
+                }
             }
         }
-        // si salio 3 veces otro numero
-        else if (maxFreq == 3) {
-            if (this.dropBox.getTotalCoin() < this.getBet() * 10) {
-                return -1;
-            } else {
-                return this.getBet() * 10;
+        else if(reelsQuantity==5){
+            if (key == "banana" && maxFreq == 5) {
+                //si no hay plata en el dropbox
+                if (this.dropBox.getTotalCoin() < this.getBet() * 200) {
+                    return -1;
+                } else {
+                    return this.getBet() * 200;
+                }
+            }
+            // si salio 3 veces otro numero
+            else if (maxFreq == 5) {
+                if (this.dropBox.getTotalCoin() < this.getBet() * 20) {
+                    return -1;
+                } else {
+                    return this.getBet() * 20;
+                }
+            }
+            // si salio 2 veces otro numero
+            else if (maxFreq == 4) {
+                if (this.dropBox.getTotalCoin() < this.getBet() * 10) {
+                    return -1;
+                } else {
+                    return this.getBet() * 10;
+                }
+            }
+            else if (maxFreq == 3) {
+                if (this.dropBox.getTotalCoin() < this.getBet() * 5) {
+                    return -1;
+                } else {
+                    return this.getBet() * 5;
+                }
             }
         }
-        // si salio 2 veces otro numero
-        else if (maxFreq == 2) {
-            if (this.dropBox.getTotalCoin() < this.getBet() * 2) {
-                return -1;
-            } else {
-                return this.getBet() * 2;
-            }
-        }
-        else
-            return 0;
+        return 0;
     }
 
 }

@@ -7,11 +7,9 @@ import com.ubp.doo.slotmachine.reel.ReelManager;
 import com.ubp.doo.slotmachine.record.RecordManager;
 import com.ubp.doo.slotmachine.display.Display;
 import com.ubp.doo.slotmachine.settings.Settings;
+import org.w3c.dom.ls.LSInput;
 import slotmachine.ui.data.ICredit;
-import slotmachine.ui.handler.IDisplayHandler;
-import slotmachine.ui.handler.IPlayHandler;
-import slotmachine.ui.handler.IPrizeHandler;
-import slotmachine.ui.handler.ICreditHandler;
+import slotmachine.ui.handler.*;
 
 import java.util.*;
 
@@ -90,13 +88,11 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
         System.out.println("Los reels han terminado de girar");
     }
 
-
     //Funcion que se dispara cuando se presiona el boton Play
     @Override
     public void play() {
         if (betManager.getBet() >= 5){
-            //play
-            //reelManager.spinReels();
+            recordManager = new RecordManager();
             reelManager.spinReels(gameMode.getNextValues());
             iDisplayHandler.setText("AAAAAAA");
             this.showResult();
@@ -119,7 +115,6 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
         iDisplayHandler.setText(text);
     }
 
-
     @Override
     public void retrieve(int prize) {
         iDisplayHandler.setText("Prize: " + prize);
@@ -140,6 +135,7 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
         int result = betManager.getResult(reelManager.getResults());
         System.out.println("Result:"+result);
         if (result>0){
+            recordManager.saveRecord(betManager.getBet(),result,reelManager.getResults(),"Gano");
             this.iDisplayHandler.setText("GANASTE!!!");
             this.retrieve(result);
             betManager.resetBet();
@@ -149,13 +145,11 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
             this.retrieve(betManager.getBet());
         }
         else {
+            recordManager.saveRecord(betManager.getBet(),result,reelManager.getResults(),"Perdio");
             this.iDisplayHandler.setText("Perdiste");
             betManager.sendToDropbox();
         }
-    }
-
-    private void setGameMode(){
-
+        recordManager.showRecords();
     }
 
     @Override

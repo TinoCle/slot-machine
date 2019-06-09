@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/slot-machine.iml" filepath="$PROJECT_DIR$/slot-machine.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ubpslotmachineui/ubpslotmachineui.iml" filepath="$PROJECT_DIR$/../ubpslotmachineui/ubpslotmachineui.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/ubpslotmachineui/ubpslotmachineui1.iml" filepath="$USER_HOME$/Downloads/ubpslotmachineui/ubpslotmachineui1.iml" />
     </modules>
   </component>
 </project>
