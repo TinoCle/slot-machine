@@ -7,9 +7,9 @@ import com.ubp.doo.slotmachine.reel.ReelManager;
 import com.ubp.doo.slotmachine.record.RecordManager;
 import com.ubp.doo.slotmachine.display.Display;
 import com.ubp.doo.slotmachine.settings.Settings;
-import org.w3c.dom.ls.LSInput;
 import slotmachine.ui.data.ICredit;
 import slotmachine.ui.handler.*;
+import slotmachine.ui.view.IGameModeView;
 
 import java.util.*;
 
@@ -20,17 +20,17 @@ import java.util.*;
     3 ceros = *100
 */
 
-public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandler, IPrizeHandler, IReelManagerListener {
+public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandler, IPrizeHandler, IReelManagerListener, IGameModeHandler {
     private ReelManager reelManager;
     private RecordManager recordManager;
-    public BetManager betManager;
+    private BetManager betManager;
 
     //TODO: ver si estas 3 clases las dejamos aca o movemos too a BetManager
     /*private CoinSlot coinSlot;
     private PayoutTray payoutTray;
     private DropBox dropBox;*/
 
-    private GameMode gameMode;
+    private GameModeContext gameMode;
     private Display display;
     private Settings settings;
 
@@ -53,6 +53,7 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
 
     public void loadConfiguration(){
         Settings settings = Settings.getInstance();
+        gameMode = new GameModeContext();
 
         //TODO comprobar que las settings esten
         /*System.out.println("GameMode: " + settings.getGameMode());
@@ -70,12 +71,11 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
             String valor = settings.getReelSize().split(",")[i];
             reelSize.add(Integer.parseInt(valor));
         }
-        if(settings.getGameMode() == "random"){
-            gameMode = GameModeFactory.getGameMode(new RandomFactory(reelSize, randomize));
-        }
-        else{
-            gameMode = GameModeFactory.getGameMode(new SequenceFactory(reelSize, settings.getSequencesQuantity(), randomize));
-        }
+
+        // Usamos el patron de State en SlotMachine
+        gameMode.setReelSizes(reelSize);
+        gameMode.setSequencesQuantity(settings.getSequencesQuantity());
+        gameMode.setGameMode(settings.getGameMode());
 
         reelManager = new ReelManager(reelSize);
         reelManager.setListener(this);
@@ -143,18 +143,36 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
         else if (result==-1){
             this.iDisplayHandler.setText("No hay dinero suficiente en el DropBox");
             this.retrieve(betManager.getBet());
+            betManager.resetBet();
         }
         else {
             recordManager.saveRecord(betManager.getBet(),result,reelManager.getResults(),"Perdio");
             this.iDisplayHandler.setText("Perdiste");
             betManager.sendToDropbox();
+            this.retrieve(0);
         }
         recordManager.showRecords();
+        iDisplayHandler.setText(gameMode.getGameMode());
     }
 
     @Override
     public void addCredit(ICredit credit) {
         betManager.addCoin(credit);
         iDisplayHandler.setText("Bet: "+ betManager.getBet());
+    }
+
+    //Change GameMode
+    @Override
+    public String change() {
+        return gameMode.changeGameMode();
+    }
+
+    @Override
+    public String getMode() {
+        if (gameMode.getGameMode().equals("random")){
+            return "Sequence";
+        }
+        else
+            return "Random";
     }
 }
