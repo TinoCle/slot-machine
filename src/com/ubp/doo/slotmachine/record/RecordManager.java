@@ -1,12 +1,11 @@
 package com.ubp.doo.slotmachine.record;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class RecordManager implements java.io.Serializable {
-    List<Record> records;
-    RecordPersistance recordSaver;
+    private List<Record> records;
+    private RecordPersistance recordSaver;
 
     public RecordManager() {
         records = new ArrayList<>();
@@ -19,8 +18,8 @@ public class RecordManager implements java.io.Serializable {
         }
     }
 
-    public void saveRecord(int betAmount, List<Integer> reelsResult, String gameResult){
-        Record record = new Record(betAmount, reelsResult, gameResult);
+    public void saveRecord(int betAmount, int prize, List<String> reelsResult, String gameResult){
+        Record record = new Record(betAmount, prize, reelsResult, gameResult);
         records.add(record);
         recordSaver.Serialize(records);
     }
@@ -31,9 +30,9 @@ public class RecordManager implements java.io.Serializable {
 
     public void showRecords(){
         if (records.size() > 0) {
-            System.out.println("Record nº\tBetAmount\tResult\tReels");
+            System.out.println("Record nº\tBetAmount\tPrize\tResult\t\tReels");
             for (int i = 0; i < records.size(); i++) {
-                System.out.println(i+"\t\t\t"+records.get(i).getBetAmount()+"\t\t\t"+records.get(i).getGameResult()+"\t"+records.get(i).getReelResults());
+                System.out.println(i+"\t\t\t"+records.get(i).getBetAmount()+"\t\t\t"+records.get(i).getPrize()+"\t\t"+records.get(i).getGameResult()+"\t\t"+records.get(i).getReelResults());
             }
         } else {
             System.out.println("No hay records guardados.");

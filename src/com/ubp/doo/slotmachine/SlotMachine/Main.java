@@ -6,8 +6,6 @@ public class Main {
     public static void main(String[] args) {
         SlotMachine slotMachine = SlotMachine.getInstance();
 
-        slotMachine.loadConfiguration();
-
         SlotMachineViewFacade.setPlayHandler(slotMachine);
         SlotMachineViewFacade.setCreditHandler(slotMachine);
 
@@ -15,10 +13,5 @@ public class Main {
         slotMachine.setiPrizeHandler(SlotMachineViewFacade.getPrizeHandler());
 
         SlotMachineViewFacade.show();
-
-        /*slotMachine.play();
-        slotMachine.showResult();
-        slotMachine.play();
-        slotMachine.showResult();*/
     }
 }
