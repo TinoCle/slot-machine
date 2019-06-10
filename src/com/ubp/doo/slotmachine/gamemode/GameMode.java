@@ -2,7 +2,7 @@ package com.ubp.doo.slotmachine.gamemode;
 import java.util.List;
 import java.util.ArrayList;
 
-public abstract class GameMode {
+public abstract class GameMode implements IGameModeState{
     private IRandomize randomize;
 
     public GameMode(IRandomize r){
