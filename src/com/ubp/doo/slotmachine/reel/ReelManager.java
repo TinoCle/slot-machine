@@ -1,9 +1,6 @@
 package com.ubp.doo.slotmachine.reel;
 
 import slotmachine.ui.handler.IReelHandler;
-import slotmachine.ui.handler.IReelsHandler;
-import slotmachine.ui.view.SlotMachineViewFacade;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -61,6 +58,4 @@ public class ReelManager implements IReelListener {
     public void setReelHandlers(List<IReelHandler> reelHandlers) {
         this.reelHandlers = reelHandlers;
     }
-
-
 }

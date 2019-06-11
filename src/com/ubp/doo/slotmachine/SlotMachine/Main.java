@@ -12,16 +12,9 @@ public class Main {
         SlotMachineViewFacade.setPlayHandler(slotMachine);
         SlotMachineViewFacade.setCreditHandler(slotMachine);
         SlotMachineViewFacade.setGameModeHandler(slotMachine);
-
-        //to activate lever
+        SlotMachineViewFacade.setResetHandler(slotMachine);
         SlotMachineViewFacade.setInputEnabled(true);
 
-
         SlotMachineViewFacade.show();
-
-        /*slotMachine.play();
-        slotMachine.showResult();
-        slotMachine.play();
-        slotMachine.showResult();*/
     }
 }
