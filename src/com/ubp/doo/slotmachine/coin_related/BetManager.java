@@ -1,36 +1,25 @@
 package com.ubp.doo.slotmachine.coin_related;
 
 import slotmachine.ui.data.ICredit;
-import slotmachine.ui.handler.IDisplayHandler;
 
 import java.util.*;
 
-public class BetManager implements IDisplayHandler {
+public class BetManager {
     private DropBox dropBox;
     private CoinSlot coinSlot;
     private PayoutTray payoutTray;
 
-    private IDisplayHandler iDisplayHandler;
+    private int bet;
+    private int prize;
 
-    public int bet;
+    public DropBox getDropBox() {
+        return dropBox;
+    }
 
-    //Seteo el dropbox, coinslot y payoutTray aca y lo saco de SlotMachine
-    //TODO: tendriamos que ver si dejamos esto aca, o lo sacamos y hacemos que BetManager se encarge solo
-    // de la cantidad apostada
     public BetManager(int dropBoxAmount) {
         this.dropBox = new DropBox(dropBoxAmount);
         this.coinSlot = new CoinSlot();
         this.payoutTray = new PayoutTray();
-    }
-
-    public void setiDisplayHandler(IDisplayHandler iDisplayHandler) {
-        this.iDisplayHandler = iDisplayHandler;
-    }
-
-    //Con esto puedo poner mensajes en el Display del GUI desde la clase BetManager
-    @Override
-    public void setText(String text) {
-        iDisplayHandler.setText(text);
     }
 
     public Integer getBet() {
@@ -43,8 +32,13 @@ public class BetManager implements IDisplayHandler {
     }
 
     public void sendToDropbox() {
-        this.dropBox.saveCoins(this.coinSlot.getCoinsInserted());
-        this.coinSlot.SetCoins(0);
+        if(prize == 0){
+            this.dropBox.saveCoins(this.coinSlot.getCoinsInserted());
+        }
+        else{
+            this.dropBox.saveCoins(-prize);
+        }
+        resetBet();
     }
 
     public void resetBet(){
@@ -52,6 +46,7 @@ public class BetManager implements IDisplayHandler {
     }
 
     public int getResult(List<String> result) {
+        prize = 0;
         HashMap<String, Integer> frequency = new HashMap<>();
         for (String tmp : result) {
             Integer count = frequency.get(tmp);
@@ -74,64 +69,58 @@ public class BetManager implements IDisplayHandler {
 
         if(reelsQuantity==3){
             if (key == "banana" && maxFreq == 3) {
-                //si no hay plata en el dropbox
                 if (this.dropBox.getTotalCoin() < this.getBet() * 100) {
                     return -1;
                 } else {
-                    return this.getBet() * 100;
+                    prize = this.getBet() * 100;
                 }
             }
-            // si salio 3 veces otro numero
             else if (maxFreq == 3) {
                 if (this.dropBox.getTotalCoin() < this.getBet() * 10) {
                     return -1;
                 } else {
-                    return this.getBet() * 10;
+                    prize = this.getBet() * 10;
                 }
             }
-            // si salio 2 veces otro numero
             else if (maxFreq == 2) {
                 if (this.dropBox.getTotalCoin() < this.getBet() * 2) {
                     return -1;
                 } else {
-                    return this.getBet() * 2;
+                    prize = this.getBet() * 2;
                 }
             }
         }
         else if(reelsQuantity==5){
             if (key == "banana" && maxFreq == 5) {
-                //si no hay plata en el dropbox
                 if (this.dropBox.getTotalCoin() < this.getBet() * 200) {
                     return -1;
                 } else {
-                    return this.getBet() * 200;
+                    prize = this.getBet() * 200;
                 }
             }
-            // si salio 3 veces otro numero
             else if (maxFreq == 5) {
                 if (this.dropBox.getTotalCoin() < this.getBet() * 20) {
                     return -1;
                 } else {
-                    return this.getBet() * 20;
+                    prize = this.getBet() * 20;
                 }
             }
-            // si salio 2 veces otro numero
             else if (maxFreq == 4) {
                 if (this.dropBox.getTotalCoin() < this.getBet() * 10) {
                     return -1;
                 } else {
-                    return this.getBet() * 10;
+                    prize = this.getBet() * 10;
                 }
             }
             else if (maxFreq == 3) {
                 if (this.dropBox.getTotalCoin() < this.getBet() * 5) {
                     return -1;
                 } else {
-                    return this.getBet() * 5;
+                    prize = this.getBet() * 5;
                 }
             }
         }
-        return 0;
+        sendToDropbox();
+        return prize;
     }
-
 }

@@ -1,8 +1,8 @@
 package com.ubp.doo.slotmachine.settings;
 
 import java.io.*;
-import java.util.List;
 import java.util.Properties;
+import java.util.Random;
 
 // Se aplica el patrón singleton
 public class Settings {
@@ -11,6 +11,7 @@ public class Settings {
     private int dropBox;
     private int sequencesQuantity;
     private int reelsQuantity;
+    private int spins;
     private String reelSize;
     private String values;
     private Properties properties;
@@ -39,6 +40,18 @@ public class Settings {
         return values;
     }
 
+    public int getSpins() {
+        return spins;
+    }
+
+    public void setGameMode(String gameMode) {
+        this.gameMode = gameMode;
+    }
+
+    public void setDropBox(int dropBox) {
+        this.dropBox = dropBox;
+    }
+
     private Settings() {
         properties = new Properties();
         LoadSettings();
@@ -60,6 +73,7 @@ public class Settings {
             properties.setProperty("ReelsQuantity", Integer.toString(reelsQuantity));
             properties.setProperty("ReelSize", reelSize);
             properties.setProperty("Values",values);
+            properties.setProperty("Spins",Integer.toString(spins));
             properties.store(output, null);
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
@@ -82,17 +96,20 @@ public class Settings {
             reelsQuantity = Integer.parseInt(properties.getProperty("ReelsQuantity"));
             reelSize = properties.getProperty("ReelSize");
             values = properties.getProperty("Values");
+            spins = Integer.parseInt(properties.getProperty("Spins"));
         } catch (FileNotFoundException e) {
             gameMode = "random";
             dropBox = 1000;
             sequencesQuantity = 10;
+            spins = 2;
             reelsQuantity = 3;
             reelSize = "";
+            Random random = new Random();
             for (int i = 0; i < reelsQuantity; i++) {
                 if (i == reelsQuantity - 1) {
-                    reelSize += ((int) (Math.random() * 12) + 3);
+                    reelSize += random.nextInt(12)+1;
                 } else {
-                    reelSize += ((int) (Math.random() * 12) + 3) + ",";
+                    reelSize += (random.nextInt(12)+1) + ",";
                 }
             }
             values = "uva,cereza,manzana,banana,frutilla,durazno,naranaja,sandia,anana,pera,limon,kiwi";
