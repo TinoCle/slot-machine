@@ -13,6 +13,7 @@ class GameModeView implements IGameModeView {
 
     public GameModeView() {
         button = new JButton();
+        button.setBounds(10,100,200,100);
         button.setText("Mode");
         button.addActionListener(new ActionListener() {
             @Override

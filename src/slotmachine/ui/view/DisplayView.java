@@ -17,6 +17,7 @@ class DisplayView implements IDisplayView, IDisplayHandler {
         label.setBackground(Color.BLACK);
         label.setForeground(Color.GREEN);
         label.setSize(200, 200);
+        label.setBounds(50,100,250,150);
     }
 
     @Override

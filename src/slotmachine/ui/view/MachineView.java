@@ -19,13 +19,15 @@ class MachineView {
         machineFrame = new JFrame();
         machineFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         machineFrame.setResizable(false);
-        machineFrame.setBounds(0, 0, 300, 400);
+        machineFrame.setBounds(0, 0, 500, 600);
+        machineFrame.setLocationRelativeTo(null);
+
 
         JPanel contentPanel = new JPanel(null);
         machineFrame.getContentPane().add(contentPanel);
 
         JPanel frontPanel = new JPanel(null);
-        frontPanel.setBounds(0,0, 300, 400);
+        frontPanel.setBounds(0,0, 500, 600);
         contentPanel.add(frontPanel);
 
         JPanel insidePanel = new JPanel(null);
@@ -35,38 +37,38 @@ class MachineView {
 
         displayPanel = new JPanel(new BorderLayout());
         displayPanel.setBackground(Color.YELLOW);
-        displayPanel.setBounds(10, 10, 210, 60);
+        displayPanel.setBounds(20, 10, 450, 50);
         frontPanel.add(displayPanel);
 
         reelPanel = new JPanel(new BorderLayout());
         reelPanel.setBackground(Color.ORANGE);
-        reelPanel.setBounds(10, 90, 210, 100);
+        reelPanel.setBounds(20, 90, 350, 100);
         frontPanel.add(reelPanel);
 
         coinSlotPanel = new JPanel(new BorderLayout());
         coinSlotPanel.setBackground(Color.RED);
-        coinSlotPanel.setBounds(190, 200, 100, 100);
+        coinSlotPanel.setBounds(225, 210, 150, 100);
         frontPanel.add(coinSlotPanel);
 
         playPanel = new JPanel(new BorderLayout());
         playPanel.setBackground(Color.GREEN);
-        playPanel.setBounds(10, 210, 100, 80);
+        playPanel.setBounds(20, 210, 100, 80);
         frontPanel.add(playPanel);
 
         leverPanel = new JPanel(new BorderLayout());
         leverPanel.setBackground(Color.DARK_GRAY);
-        leverPanel.setBounds(230, 10, 60, 180);
+        leverPanel.setBounds(400, 80, 60, 180);
         frontPanel.add(leverPanel);
 
         payoutTrayPanel = new JPanel(new BorderLayout());
         payoutTrayPanel.setBackground(Color.CYAN);
-        payoutTrayPanel.setBounds(60, 300, 100, 60);
+        payoutTrayPanel.setBounds(60, 350, 150, 60);
         frontPanel.add(payoutTrayPanel);
 
 
         JButton openButton = new JButton();
-        openButton.setText("O");
-        openButton.setBounds(250, 330, 40, 40);
+        openButton.setText("GameModes");
+        openButton.setBounds(320, 350, 150, 40);
         openButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -82,8 +84,8 @@ class MachineView {
         insidePanel.add(gameModePanel);
 
         JButton closeButton = new JButton();
-        closeButton.setText("C");
-        closeButton.setBounds(250, 330, 40, 40);
+        closeButton.setText("Return");
+        closeButton.setBounds(250, 330, 100, 40);
         closeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
