@@ -89,7 +89,7 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
             recordManager = new RecordManager();
             List<Integer> result = this.gameMode.getNextValues();
             this.setText("Spinning Reels");
-            this.reelManager.spinReels(2, result);
+            this.reelManager.spinReels(settings.getSpins(), result);
         } else {
             iDisplayHandler.setText("Cantidad Insuficiente de Monedas");
             SlotMachineViewFacade.setInputEnabled(false);
@@ -137,15 +137,12 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
             recordManager.saveRecord(betManager.getBet(),result,reelManager.getResults(),"Gano");
             this.iDisplayHandler.setText("GANASTE!!!");
             this.retrieve(result);
-            betManager.resetBet();
         } else if (result == -1) {
             this.iDisplayHandler.setText("No hay dinero suficiente en el DropBox");
             this.retrieve(betManager.getBet());
-            betManager.resetBet();
         } else {
             recordManager.saveRecord(betManager.getBet(),result,reelManager.getResults(),"Perdio");
             this.iDisplayHandler.setText("Perdiste");
-            betManager.sendToDropbox();
             this.retrieve(0);
         }
         settings.setDropBox(betManager.getDropBox().getTotalCoin());

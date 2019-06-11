@@ -13,14 +13,12 @@ public class BetManager implements IDisplayHandler {
     private IDisplayHandler iDisplayHandler;
 
     private int bet;
+    private int prize;
 
     public DropBox getDropBox() {
         return dropBox;
     }
 
-    //Seteo el dropbox, coinslot y payoutTray aca y lo saco de SlotMachine
-    //TODO: tendriamos que ver si dejamos esto aca, o lo sacamos y hacemos que BetManager se encarge solo
-    // de la cantidad apostada
     public BetManager(int dropBoxAmount) {
         this.dropBox = new DropBox(dropBoxAmount);
         this.coinSlot = new CoinSlot();
@@ -31,7 +29,6 @@ public class BetManager implements IDisplayHandler {
         this.iDisplayHandler = iDisplayHandler;
     }
 
-    //Con esto puedo poner mensajes en el Display del GUI desde la clase BetManager
     @Override
     public void setText(String text) {
         iDisplayHandler.setText(text);
@@ -47,8 +44,13 @@ public class BetManager implements IDisplayHandler {
     }
 
     public void sendToDropbox() {
-        this.dropBox.saveCoins(this.coinSlot.getCoinsInserted());
-        this.coinSlot.SetCoins(0);
+        if(prize == 0){
+            this.dropBox.saveCoins(this.coinSlot.getCoinsInserted());
+        }
+        else{
+            this.dropBox.saveCoins(-prize);
+        }
+        resetBet();
     }
 
     public void resetBet(){
@@ -56,7 +58,7 @@ public class BetManager implements IDisplayHandler {
     }
 
     public int getResult(List<String> result) {
-        int prize = 0;
+        prize = 0;
         HashMap<String, Integer> frequency = new HashMap<>();
         for (String tmp : result) {
             Integer count = frequency.get(tmp);
@@ -79,14 +81,12 @@ public class BetManager implements IDisplayHandler {
 
         if(reelsQuantity==3){
             if (key == "banana" && maxFreq == 3) {
-                //si no hay plata en el dropbox
                 if (this.dropBox.getTotalCoin() < this.getBet() * 100) {
                     return -1;
                 } else {
                     prize = this.getBet() * 100;
                 }
             }
-            // si salio 3 veces otro numero
             else if (maxFreq == 3) {
                 if (this.dropBox.getTotalCoin() < this.getBet() * 10) {
                     return -1;
@@ -94,7 +94,6 @@ public class BetManager implements IDisplayHandler {
                     prize = this.getBet() * 10;
                 }
             }
-            // si salio 2 veces otro numero
             else if (maxFreq == 2) {
                 if (this.dropBox.getTotalCoin() < this.getBet() * 2) {
                     return -1;
@@ -105,14 +104,12 @@ public class BetManager implements IDisplayHandler {
         }
         else if(reelsQuantity==5){
             if (key == "banana" && maxFreq == 5) {
-                //si no hay plata en el dropbox
                 if (this.dropBox.getTotalCoin() < this.getBet() * 200) {
                     return -1;
                 } else {
                     prize = this.getBet() * 200;
                 }
             }
-            // si salio 3 veces otro numero
             else if (maxFreq == 5) {
                 if (this.dropBox.getTotalCoin() < this.getBet() * 20) {
                     return -1;
@@ -120,7 +117,6 @@ public class BetManager implements IDisplayHandler {
                     prize = this.getBet() * 20;
                 }
             }
-            // si salio 2 veces otro numero
             else if (maxFreq == 4) {
                 if (this.dropBox.getTotalCoin() < this.getBet() * 10) {
                     return -1;
@@ -136,9 +132,7 @@ public class BetManager implements IDisplayHandler {
                 }
             }
         }
-        if(prize!=0){
-            dropBox.saveCoins(-prize);
-        }
+        sendToDropbox();
         return prize;
     }
 
