@@ -39,6 +39,14 @@ public class Settings {
         return values;
     }
 
+    public void setGameMode(String gameMode) {
+        this.gameMode = gameMode;
+    }
+
+    public void setDropBox(int dropBox) {
+        this.dropBox = dropBox;
+    }
+
     private Settings() {
         properties = new Properties();
         LoadSettings();

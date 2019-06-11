@@ -12,7 +12,11 @@ public class BetManager implements IDisplayHandler {
 
     private IDisplayHandler iDisplayHandler;
 
-    public int bet;
+    private int bet;
+
+    public DropBox getDropBox() {
+        return dropBox;
+    }
 
     //Seteo el dropbox, coinslot y payoutTray aca y lo saco de SlotMachine
     //TODO: tendriamos que ver si dejamos esto aca, o lo sacamos y hacemos que BetManager se encarge solo
@@ -52,6 +56,7 @@ public class BetManager implements IDisplayHandler {
     }
 
     public int getResult(List<String> result) {
+        int prize = 0;
         HashMap<String, Integer> frequency = new HashMap<>();
         for (String tmp : result) {
             Integer count = frequency.get(tmp);
@@ -78,7 +83,7 @@ public class BetManager implements IDisplayHandler {
                 if (this.dropBox.getTotalCoin() < this.getBet() * 100) {
                     return -1;
                 } else {
-                    return this.getBet() * 100;
+                    prize = this.getBet() * 100;
                 }
             }
             // si salio 3 veces otro numero
@@ -86,7 +91,7 @@ public class BetManager implements IDisplayHandler {
                 if (this.dropBox.getTotalCoin() < this.getBet() * 10) {
                     return -1;
                 } else {
-                    return this.getBet() * 10;
+                    prize = this.getBet() * 10;
                 }
             }
             // si salio 2 veces otro numero
@@ -94,7 +99,7 @@ public class BetManager implements IDisplayHandler {
                 if (this.dropBox.getTotalCoin() < this.getBet() * 2) {
                     return -1;
                 } else {
-                    return this.getBet() * 2;
+                    prize = this.getBet() * 2;
                 }
             }
         }
@@ -104,7 +109,7 @@ public class BetManager implements IDisplayHandler {
                 if (this.dropBox.getTotalCoin() < this.getBet() * 200) {
                     return -1;
                 } else {
-                    return this.getBet() * 200;
+                    prize = this.getBet() * 200;
                 }
             }
             // si salio 3 veces otro numero
@@ -112,7 +117,7 @@ public class BetManager implements IDisplayHandler {
                 if (this.dropBox.getTotalCoin() < this.getBet() * 20) {
                     return -1;
                 } else {
-                    return this.getBet() * 20;
+                    prize = this.getBet() * 20;
                 }
             }
             // si salio 2 veces otro numero
@@ -120,18 +125,21 @@ public class BetManager implements IDisplayHandler {
                 if (this.dropBox.getTotalCoin() < this.getBet() * 10) {
                     return -1;
                 } else {
-                    return this.getBet() * 10;
+                    prize = this.getBet() * 10;
                 }
             }
             else if (maxFreq == 3) {
                 if (this.dropBox.getTotalCoin() < this.getBet() * 5) {
                     return -1;
                 } else {
-                    return this.getBet() * 5;
+                    prize = this.getBet() * 5;
                 }
             }
         }
-        return 0;
+        if(prize!=0){
+            dropBox.saveCoins(-prize);
+        }
+        return prize;
     }
 
 }
