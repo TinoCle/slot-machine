@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea15c740-f6cd-4b6d-8b89-87ea93960632" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../ubpslotmachineui/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ubpslotmachineui/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ubpslotmachineui/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ubpslotmachineui/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ubpslotmachineui/ubpslotmachineui.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/BetManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/BetManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/IReelListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/IReelListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/Reel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/Reel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/ReelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/ReelManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/handler/IGameModeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/handler/IGameModeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/DisplayView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/DisplayView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/GameModeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/GameModeView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/MachineView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/MachineView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/SlotMachineView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/SlotMachineView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/SlotMachineViewFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ubpslotmachineui/src/slotmachine/ui/view/SlotMachineViewFacade.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="106" column="62" selection-start-line="106" selection-start-column="62" selection-end-line="106" selection-end-column="62" />
+            <state relative-caret-position="24">
+              <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#loadConfiguration#0;class#SlotMachine#0" />
@@ -54,7 +36,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/ReelManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="1080">
               <caret line="53" column="65" selection-start-line="53" selection-start-column="65" selection-end-line="53" selection-end-column="65" />
               <folding>
                 <element signature="e#567#568#0" expanded="true" />
@@ -64,17 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/Reel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
-              <folding>
-                <element signature="e#1834#1835#0" expanded="true" />
-                <element signature="e#1882#1883#0" expanded="true" />
-                <element signature="e#1966#1967#0" expanded="true" />
-                <element signature="e#1999#2000#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="792">
+              <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -142,8 +118,8 @@
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/IReelListener.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/ReelManager.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/BetManager.java" />
-        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/Reel.java" />
+        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java" />
       </list>
     </option>
   </component>
@@ -160,8 +136,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,6 +201,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -435,7 +411,7 @@
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1340283" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21295607" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -836,8 +812,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="106" column="62" selection-start-line="106" selection-start-column="62" selection-end-line="106" selection-end-column="62" />
+        <state relative-caret-position="24">
+          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#loadConfiguration#0;class#SlotMachine#0" />
@@ -850,7 +826,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/ReelManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="1080">
           <caret line="53" column="65" selection-start-line="53" selection-start-column="65" selection-end-line="53" selection-end-column="65" />
           <folding>
             <element signature="e#567#568#0" expanded="true" />
@@ -861,14 +837,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/Reel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
-          <folding>
-            <element signature="e#1834#1835#0" expanded="true" />
-            <element signature="e#1882#1883#0" expanded="true" />
-            <element signature="e#1966#1967#0" expanded="true" />
-            <element signature="e#1999#2000#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="792">
+          <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -926,7 +896,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2020316" />
+                <option value="0.2" />
                 <option value="0.6" />
               </list>
             </option>

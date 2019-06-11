@@ -23,7 +23,7 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IGameModeHa
                                     IPrizeHandler, IReelManagerListener {
     private ReelManager reelManager;
     private RecordManager recordManager;
-    public BetManager betManager;
+    private BetManager betManager;
 
     private GameMode gameMode;
     private Display display;
