@@ -12,6 +12,7 @@ public class Main {
         SlotMachineViewFacade.setPlayHandler(slotMachine);
         SlotMachineViewFacade.setCreditHandler(slotMachine);
         SlotMachineViewFacade.setGameModeHandler(slotMachine);
+        SlotMachineViewFacade.setResetHandler(slotMachine);
         SlotMachineViewFacade.setInputEnabled(true);
 
         SlotMachineViewFacade.show();

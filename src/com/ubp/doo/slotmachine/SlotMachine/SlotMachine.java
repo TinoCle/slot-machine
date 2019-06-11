@@ -13,10 +13,11 @@ import slotmachine.ui.view.SlotMachineViewFacade;
 import java.util.*;
 
 public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandler,
-                                    IPrizeHandler, IReelManagerListener, IGameModeHandler {
+                                    IPrizeHandler, IReelManagerListener, IGameModeHandler,
+                                    IResetHandler{
     private ReelManager reelManager;
     private RecordManager recordManager;
-    public BetManager betManager;
+    private BetManager betManager;
 
     private GameModeContext gameMode;
     private Display display;
@@ -25,7 +26,6 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
     private IDisplayHandler iDisplayHandler;
     private IPrizeHandler iPrizeHandler;
     private IReelsHandler iReelsHandler;
-    private IGameModeHandler iGameModeHandler;
     private static SlotMachine instance;
 
     private IRandomize randomize;
@@ -118,7 +118,6 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
 
     public void setiDisplayHandlerer(IDisplayHandler displayHandler) {
         this.iDisplayHandler = displayHandler;
-        betManager.setiDisplayHandler(displayHandler);
     }
 
     public void setiPrizeHandler(IPrizeHandler iPrizeHandler) {
@@ -172,5 +171,14 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
         }
         else
             return "Random";
+    }
+
+    @Override
+    public void reset(){
+        betManager.getDropBox().setTotalCoin(1000);
+        settings.setDropBox(betManager.getDropBox().getTotalCoin());
+        gameMode.setGameMode("random");
+        settings.setGameMode(gameMode.getGameMode());
+        settings.SaveSettings();
     }
 }

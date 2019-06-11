@@ -1,16 +1,13 @@
 package com.ubp.doo.slotmachine.coin_related;
 
 import slotmachine.ui.data.ICredit;
-import slotmachine.ui.handler.IDisplayHandler;
 
 import java.util.*;
 
-public class BetManager implements IDisplayHandler {
+public class BetManager {
     private DropBox dropBox;
     private CoinSlot coinSlot;
     private PayoutTray payoutTray;
-
-    private IDisplayHandler iDisplayHandler;
 
     private int bet;
     private int prize;
@@ -23,15 +20,6 @@ public class BetManager implements IDisplayHandler {
         this.dropBox = new DropBox(dropBoxAmount);
         this.coinSlot = new CoinSlot();
         this.payoutTray = new PayoutTray();
-    }
-
-    public void setiDisplayHandler(IDisplayHandler iDisplayHandler) {
-        this.iDisplayHandler = iDisplayHandler;
-    }
-
-    @Override
-    public void setText(String text) {
-        iDisplayHandler.setText(text);
     }
 
     public Integer getBet() {
@@ -135,5 +123,4 @@ public class BetManager implements IDisplayHandler {
         sendToDropbox();
         return prize;
     }
-
 }
