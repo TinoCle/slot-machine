@@ -2,6 +2,8 @@ package slotmachine.ui.view;
 
 import slotmachine.ui.handler.*;
 
+import java.util.List;
+
 public class SlotMachineViewFacade {
     private static SlotMachineView slotMachine;
 
@@ -44,4 +46,17 @@ public class SlotMachineViewFacade {
     public static void setCreditInputEnabled(boolean enabled) {
         getInstance().setCreditInputEnabled(enabled);
     }
+
+    public static void setReelsQuantity (int reelsQuantity){
+        getInstance().addReels(reelsQuantity);
+    }
+
+    public static IReelsHandler getReelsHandler(){
+        return getInstance().getReelsHandler();
+    }
+
+    public static void setResult(List<String> result){
+
+    }
+
 }

@@ -31,7 +31,7 @@ class MachineView {
         contentPanel.add(frontPanel);
 
         JPanel insidePanel = new JPanel(null);
-        insidePanel.setBounds(0,0, 300, 400);
+        insidePanel.setBounds(0,0, 500, 600);
         insidePanel.setVisible(false);
         contentPanel.add(insidePanel);
 

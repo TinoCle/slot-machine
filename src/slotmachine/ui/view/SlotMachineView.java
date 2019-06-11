@@ -16,6 +16,8 @@ class SlotMachineView {
     private IInputHandler playInputHandler;
     private IInputHandler leverInputHandler;
     private IInputHandler creditInputHandler;
+    private IReelView reelView;
+    private IReelsHandler reelsHandler;
 
     protected SlotMachineView() {
         machineView = new MachineView();
@@ -46,12 +48,16 @@ class SlotMachineView {
 
         gameModeView = new GameModeView();
 
+        //reelView = new ReelView(5);
+        //reelsHandler = (IReelsHandler) reelView;
+
         machineView.addDisplayView(displayView);
         machineView.addCoinSlotView(coinSlotView);
         machineView.addLeverView(leverView);
         machineView.addPlayView(playView);
         machineView.addGameModeView(gameModeView);
         machineView.addPayoutTrayView(payoutTrayView);
+        //machineView.addReelView(reelView);
     }
 
     public void show() {
@@ -85,7 +91,17 @@ class SlotMachineView {
         creditInputHandler.setEnabled(enabled);
     }
 
+    public void addReels(int qty){
+        reelView = new ReelView(qty);
+        reelsHandler = (IReelsHandler) reelView;
+        machineView.addReelView(reelView);
+    }
+
     public void setCreditInputEnabled(boolean enabled) {
         creditInputHandler.setEnabled(enabled);
+    }
+
+    public IReelsHandler getReelsHandler(){
+        return reelsHandler;
     }
 }

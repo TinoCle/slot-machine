@@ -33,5 +33,6 @@ class GameModeView implements IGameModeView {
     @Override
     public void setGameModeHandler(IGameModeHandler handler) {
         gameModeHandler = handler;
+        button.setText(gameModeHandler.getMode());
     }
 }
