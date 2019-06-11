@@ -9,6 +9,7 @@ import com.ubp.doo.slotmachine.display.Display;
 import com.ubp.doo.slotmachine.settings.Settings;
 import slotmachine.ui.data.ICredit;
 import slotmachine.ui.handler.*;
+import slotmachine.ui.view.SlotMachineViewFacade;
 
 import java.util.*;
 
@@ -24,17 +25,13 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IGameModeHa
     private RecordManager recordManager;
     public BetManager betManager;
 
-    //TODO: ver si estas 3 clases las dejamos aca o movemos too a BetManager
-    /*private CoinSlot coinSlot;
-    private PayoutTray payoutTray;
-    private DropBox dropBox;*/
-
     private GameMode gameMode;
     private Display display;
     private Settings settings;
 
     private IDisplayHandler iDisplayHandler;
     private IPrizeHandler iPrizeHandler;
+    private IReelsHandler iReelsHandler;
     private IGameModeHandler iGameModeHandler;
     private static SlotMachine instance;
 
@@ -67,6 +64,8 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IGameModeHa
         reelSize = new ArrayList<>();
         reelQuantity = settings.getReelsQuantity();
 
+        SlotMachineViewFacade.setReelsQuantity(reelQuantity);
+
         for (int i = 0; i < reelQuantity; i++) {
             String valor = settings.getReelSize().split(",")[i];
             reelSize.add(Integer.parseInt(valor));
@@ -87,22 +86,25 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IGameModeHa
     @Override
     public void onReelsFinished() {
         System.out.println("Los reels han terminado de girar");
+        this.showResult();
     }
 
     //Funcion que se dispara cuando se presiona el boton Play
     @Override
     public void play() {
         if (betManager.getBet() >= 5) {
-            reelManager.spinReels(gameMode.getNextValues());
-            iDisplayHandler.setText("AAAAAAA");
-            this.showResult();
+            List<Integer> result = this.gameMode.getNextValues();
+            this.setText("Spinning Reels");
+            this.reelManager.spinReels(2, result);
         } else {
             iDisplayHandler.setText("Cantidad Insuficiente de Monedas");
+            SlotMachineViewFacade.setInputEnabled(false);
             Timer timer = new Timer();
             timer.schedule(new TimerTask() {
                 @Override
                 public void run() {
                     iDisplayHandler.setText("Bet: " + betManager.getBet());
+                    SlotMachineViewFacade.setInputEnabled(true);
                 }
             }, 2000);
         }
@@ -117,11 +119,10 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IGameModeHa
     //IPrizeHandler: para mostrar por PayoutTray que ganó
     @Override
     public void retrieve(int prize) {
-        iDisplayHandler.setText("Prize: " + prize);
         iPrizeHandler.retrieve(prize);
     }
 
-    public void setDisplayHander(IDisplayHandler displayHandler) {
+    public void setiDisplayHandlerer(IDisplayHandler displayHandler) {
         this.iDisplayHandler = displayHandler;
         betManager.setiDisplayHandler(displayHandler);
     }
@@ -130,10 +131,14 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IGameModeHa
         this.iPrizeHandler = iPrizeHandler;
     }
 
+    public void setIReelsHandler(IReelsHandler iReelsHandler){
+        this.iReelsHandler = iReelsHandler;
+        reelManager.setReelHandlers(iReelsHandler.getReelsHandler());
+    }
+
     private void showResult() {
         System.out.println("Resultado: " + reelManager.getResults());
         int result = betManager.getResult(reelManager.getResults());
-        System.out.println("Result:" + result);
         if (result > 0) {
             this.iDisplayHandler.setText("GANASTE!!!");
             this.retrieve(result);
@@ -147,7 +152,6 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IGameModeHa
             betManager.sendToDropbox();
             this.retrieve(0);
         }
-        iDisplayHandler.setText(Settings.getInstance().getGameMode());
     }
 
     @Override

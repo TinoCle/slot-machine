@@ -9,14 +9,9 @@ public class BetManager implements IDisplayHandler {
     private DropBox dropBox;
     private CoinSlot coinSlot;
     private PayoutTray payoutTray;
-
     private IDisplayHandler iDisplayHandler;
-
     public int bet;
 
-    //Seteo el dropbox, coinslot y payoutTray aca y lo saco de SlotMachine
-    //TODO: tendriamos que ver si dejamos esto aca, o lo sacamos y hacemos que BetManager se encarge solo
-    // de la cantidad apostada
     public BetManager(int dropBoxAmount) {
         this.dropBox = new DropBox(dropBoxAmount);
         this.coinSlot = new CoinSlot();
@@ -26,7 +21,6 @@ public class BetManager implements IDisplayHandler {
     public void setiDisplayHandler(IDisplayHandler iDisplayHandler) {
         this.iDisplayHandler = iDisplayHandler;
     }
-
     //Con esto puedo poner mensajes en el Display del GUI desde la clase BetManager
     @Override
     public void setText(String text) {
@@ -47,7 +41,7 @@ public class BetManager implements IDisplayHandler {
         this.coinSlot.SetCoins(0);
     }
 
-    public void resetBet(){
+    public void resetBet() {
         this.coinSlot.SetCoins(0);
     }
 
@@ -61,14 +55,14 @@ public class BetManager implements IDisplayHandler {
         }
         int maxFreq = Collections.max(frequency.values());
         System.out.println(frequency);
-        String key="";
+        String key = "";
         for (Map.Entry<String, Integer> entry : frequency.entrySet()) {
             if (entry.getValue() == maxFreq) {
                 key = entry.getKey();
                 break;
             }
         }
-        System.out.println("Key:"+ key +" Freq:"+maxFreq);
+        System.out.println("Key:" + key + " Freq:" + maxFreq);
         // si salieron 3 ceros
         if (key == "banana" && maxFreq == 3) {
             //si no hay plata en el dropbox
@@ -93,9 +87,7 @@ public class BetManager implements IDisplayHandler {
             } else {
                 return this.getBet() * 2;
             }
-        }
-        else
+        } else
             return 0;
     }
-
 }
