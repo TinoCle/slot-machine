@@ -7,7 +7,6 @@ import java.util.*;
 public class BetManager {
     private DropBox dropBox;
     private CoinSlot coinSlot;
-    private PayoutTray payoutTray;
 
     private int bet;
     private int prize;
@@ -16,10 +15,13 @@ public class BetManager {
         return dropBox;
     }
 
+    public void setCoinSlot(CoinSlot coinSlot) {
+        this.coinSlot = coinSlot;
+    }
+
     public BetManager(int dropBoxAmount) {
         this.dropBox = new DropBox(dropBoxAmount);
         this.coinSlot = new CoinSlot();
-        this.payoutTray = new PayoutTray();
     }
 
     public Integer getBet() {
@@ -38,7 +40,6 @@ public class BetManager {
         else{
             this.dropBox.saveCoins(-prize);
         }
-        resetBet();
     }
 
     public void resetBet(){

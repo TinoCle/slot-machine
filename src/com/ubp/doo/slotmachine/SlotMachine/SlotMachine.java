@@ -5,7 +5,6 @@ import com.ubp.doo.slotmachine.gamemode.*;
 import com.ubp.doo.slotmachine.reel.IReelManagerListener;
 import com.ubp.doo.slotmachine.reel.ReelManager;
 import com.ubp.doo.slotmachine.record.RecordManager;
-import com.ubp.doo.slotmachine.display.Display;
 import com.ubp.doo.slotmachine.settings.Settings;
 import slotmachine.ui.data.ICredit;
 import slotmachine.ui.handler.*;
@@ -20,7 +19,6 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
     private BetManager betManager;
 
     private GameModeContext gameMode;
-    private Display display;
     private Settings settings;
 
     private IDisplayHandler iDisplayHandler;
@@ -144,6 +142,7 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
             this.iDisplayHandler.setText("Perdiste");
             this.retrieve(0);
         }
+        betManager.resetBet();
         settings.setDropBox(betManager.getDropBox().getTotalCoin());
         settings.SaveSettings();
         recordManager.showRecords();
