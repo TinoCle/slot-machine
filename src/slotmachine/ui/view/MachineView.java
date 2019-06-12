@@ -1,7 +1,5 @@
 package slotmachine.ui.view;
 
-import slotmachine.ui.handler.IResetHandler;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -24,7 +22,6 @@ class MachineView {
         machineFrame.setResizable(false);
         machineFrame.setBounds(0, 0, 500, 600);
         machineFrame.setLocationRelativeTo(null);
-
 
         JPanel contentPanel = new JPanel(null);
         machineFrame.getContentPane().add(contentPanel);
@@ -68,9 +65,8 @@ class MachineView {
         payoutTrayPanel.setBounds(60, 350, 150, 60);
         frontPanel.add(payoutTrayPanel);
 
-
         JButton openButton = new JButton();
-        openButton.setText("GameModes");
+        openButton.setText("Change Mode");
         openButton.setBounds(320, 350, 150, 40);
         openButton.addActionListener(new ActionListener() {
             @Override
@@ -81,15 +77,15 @@ class MachineView {
         });
         frontPanel.add(openButton);
 
+        resetPanel = new JPanel(new BorderLayout());
+        resetPanel.setBackground(Color.GREEN);
+        resetPanel.setBounds(320, 400, 150, 40);
+        frontPanel.add(resetPanel);
+
         gameModePanel = new JPanel(new BorderLayout());
         gameModePanel.setBackground(Color.GREEN);
         gameModePanel.setBounds(10, 10, 280, 80);
         insidePanel.add(gameModePanel);
-
-        resetPanel = new JPanel(new BorderLayout());
-        resetPanel.setBackground(Color.GREEN);
-        resetPanel.setBounds(10, 200, 280, 80);
-        insidePanel.add(resetPanel);
 
         JButton closeButton = new JButton();
         closeButton.setText("Return");
