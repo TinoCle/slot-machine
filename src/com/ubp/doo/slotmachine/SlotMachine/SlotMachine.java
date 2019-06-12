@@ -5,7 +5,6 @@ import com.ubp.doo.slotmachine.gamemode.*;
 import com.ubp.doo.slotmachine.reel.IReelManagerListener;
 import com.ubp.doo.slotmachine.reel.ReelManager;
 import com.ubp.doo.slotmachine.record.RecordManager;
-import com.ubp.doo.slotmachine.display.Display;
 import com.ubp.doo.slotmachine.settings.Settings;
 import slotmachine.ui.data.ICredit;
 import slotmachine.ui.handler.*;
@@ -20,7 +19,6 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
     private BetManager betManager;
 
     private GameModeContext gameMode;
-    private Display display;
     private Settings settings;
 
     private IDisplayHandler iDisplayHandler;
@@ -28,7 +26,6 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
     private IReelsHandler iReelsHandler;
     private static SlotMachine instance;
 
-    private IRandomize randomize;
     private List<Integer> reelSize;
     private int reelQuantity;
 
@@ -54,7 +51,6 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
         System.out.println("ReelQuantity: " + settings.getReelsQuantity());
         System.out.println("SequenceQuantity: " + settings.getSequencesQuantity());*/
 
-        randomize = new Randomize();
         reelSize = new ArrayList<>();
         reelQuantity = settings.getReelsQuantity();
 
@@ -144,6 +140,7 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
             this.iDisplayHandler.setText("Perdiste");
             this.retrieve(0);
         }
+        betManager.resetBet();
         settings.setDropBox(betManager.getDropBox().getTotalCoin());
         settings.SaveSettings();
         recordManager.showRecords();
