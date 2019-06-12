@@ -1,5 +1,7 @@
 package slotmachine.ui.view;
 
+import slotmachine.ui.handler.IResetHandler;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -14,6 +16,7 @@ class MachineView {
     private JPanel playPanel;
     private JPanel gameModePanel;
     private JPanel payoutTrayPanel;
+    private JPanel resetPanel;
 
     public MachineView() {
         machineFrame = new JFrame();
@@ -83,6 +86,11 @@ class MachineView {
         gameModePanel.setBounds(10, 10, 280, 80);
         insidePanel.add(gameModePanel);
 
+        resetPanel = new JPanel(new BorderLayout());
+        resetPanel.setBackground(Color.GREEN);
+        resetPanel.setBounds(10, 200, 280, 80);
+        insidePanel.add(resetPanel);
+
         JButton closeButton = new JButton();
         closeButton.setText("Return");
         closeButton.setBounds(250, 330, 100, 40);
@@ -118,6 +126,10 @@ class MachineView {
 
     public void addGameModeView(IGameModeView view) {
         gameModePanel.add(view.getComponent());
+    }
+
+    public void addResetView(IResetView view) {
+        resetPanel.add(view.getComponent());
     }
 
     public void addPayoutTrayView(IPayoutTrayView view) {
