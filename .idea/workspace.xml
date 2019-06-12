@@ -3,17 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ea15c740-f6cd-4b6d-8b89-87ea93960632" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/records.dat" beforeDir="false" afterPath="$PROJECT_DIR$/records.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/Button.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/GameModeButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/IAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/Lever.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/PlayButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/ResetButton.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/BetManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/BetManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/CoinSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/CoinSlot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/PayoutTray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/display/Display.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/ubp/doo/slotmachine/coin_related/BetManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/ubp/doo/slotmachine/coin_related/BetManagerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,59 +27,7 @@
     <favorites_list name="slot-machine" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/DropBox.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-              <folding>
-                <element signature="e#169#170#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/BetManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2430">
-              <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#389#390#0" expanded="true" />
-                <element signature="e#429#430#0" expanded="true" />
-                <element signature="e#677#678#0" expanded="true" />
-                <element signature="e#733#734#0" expanded="true" />
-                <element signature="e#975#976#0" expanded="true" />
-                <element signature="e#1016#1017#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/ubp/doo/slotmachine/coin_related/BetManagerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2998">
-              <caret line="372" lean-forward="true" selection-start-line="372" selection-end-line="372" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1731">
-              <caret line="97" column="47" lean-forward="true" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -94,6 +37,14 @@
         <option value="JUnit5 Test Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>SetCoins</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>setCoinsInserted</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -118,7 +69,6 @@
         <option value="$PROJECT_DIR$/test/com/ubp/doo/slotmachine/gamemode/SequenceTest.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/ExceptionCoin.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/DropBox.java" />
-        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/Main.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/settings/SettingsLoader.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/safasf.form" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/Main.java" />
@@ -129,7 +79,6 @@
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordManager.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordPersistance.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/IGameModeState.java" />
-        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/GameMode.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/GameContext.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/GameModeContext.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/Reel.java" />
@@ -140,12 +89,14 @@
         <option value="$USER_HOME$/Downloads/slot-machine-GUI/src/slotmachine/ui/view/ResetView.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/Main.java" />
         <option value="$USER_HOME$/Downloads/slot-machine-GUI/src/slotmachine/ui/view/SlotMachineView.java" />
-        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java" />
         <option value="$USER_HOME$/Downloads/slot-machine-GUI/src/slotmachine/ui/view/MachineView.java" />
-        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/CoinSlot.java" />
-        <option value="$PROJECT_DIR$/test/com/ubp/doo/slotmachine/coin_related/BetManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/BetManager.java" />
         <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/PayoutTray.java" />
+        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/BetManager.java" />
+        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/CoinSlot.java" />
+        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/GameMode.java" />
+        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java" />
+        <option value="$PROJECT_DIR$/test/com/ubp/doo/slotmachine/coin_related/BetManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/Main.java" />
       </list>
     </option>
   </component>
@@ -156,7 +107,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-7" />
+    <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -168,6 +119,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -175,23 +128,10 @@
               <item name="slot-machine" type="b2602c69:ProjectViewProjectNode" />
               <item name="slot-machine" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="slot-machine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slot-machine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="slot-machine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slot-machine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="slotmachine" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,7 +169,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BetManagerTest">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -338,8 +278,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BetManagerTest" />
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="JUnit.BetManagerTest" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
       </list>
@@ -400,9 +340,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" visible="true" weight="0.2579425" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" visible="true" weight="0.22087745" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -410,7 +350,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50085473" side_tool="true" weight="0.24962178" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32820514" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32649574" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49967846" weight="0.75213677" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3965812" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -444,84 +384,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/ubpslotmachineui/src/slotmachine/ui/view/CoinSlotView.java" />
-    <entry file="file://$PROJECT_DIR$/records.dat" />
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/Record.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordPersistance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#177#178#0" expanded="true" />
-            <element signature="e#218#219#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/Sequence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-118">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/GameMode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/IGameModeState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/RandomFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/ubpslotmachineui/src/slotmachine/ui/Main.java" />
-    <entry file="file://$USER_HOME$/Downloads/ubpslotmachineui/src/slotmachine/ui/handler/IGameModeHandler.java" />
-    <entry file="file://$USER_HOME$/Downloads/ubpslotmachineui/src/slotmachine/ui/view/IGameModeView.java" />
     <entry file="file://$USER_HOME$/Downloads/slot-machine-develop-gonzi/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-174">
@@ -540,41 +402,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/ReelManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/Button.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/ResetButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#124#125#0" expanded="true" />
-            <element signature="e#156#157#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/PlayButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/Button.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/ResetButton.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/button/PlayButton.java" />
     <entry file="file://$USER_HOME$/Downloads/slot-machine-GUI/src/slotmachine/ui/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -631,16 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/GameModeContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-351">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/slot-machine-GUI/src/slotmachine/ui/handler/IResetHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -685,23 +505,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/display/Display.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/settings/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="97" column="54" lean-forward="true" selection-start-line="97" selection-start-column="54" selection-end-line="97" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/display/Display.java" />
     <entry file="file://$USER_HOME$/Downloads/slot-machine-GUI/src/slotmachine/ui/view/LeverView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -719,10 +523,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/ubp/doo/slotmachine/gamemode/RandomTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-945">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/PayoutTray.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/DropBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding>
+            <element signature="e#169#170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/BetManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#986#987#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/Reel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+        <state relative-caret-position="-864">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#438#439#0" expanded="true" />
@@ -740,15 +576,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/IReelManagerListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="108">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/RandomizeMock.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/settings/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="594">
+          <caret line="109" column="33" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/reel/ReelManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/Record.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" column="96" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="96" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/record/RecordPersistance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#177#178#0" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/Sequence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -759,75 +654,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/Randomize.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/RandomizeMock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/SequenceFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/ubp/doo/slotmachine/gamemode/RandomTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/IGameModeState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-945">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        <state relative-caret-position="135">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/IGameModeAbstractFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/GameMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/RandomFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/Randomize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/CoinSlot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="378">
+          <caret line="20" selection-start-line="16" selection-end-line="20" />
           <folding>
-            <element signature="e#174#175#0" expanded="true" />
-            <element signature="e#210#211#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/DropBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#169#170#0" expanded="true" />
+            <element signature="e#227#228#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/ubp/doo/slotmachine/coin_related/BetManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2998">
-          <caret line="372" lean-forward="true" selection-start-line="372" selection-end-line="372" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/BetManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2430">
-          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-            <element signature="e#677#678#0" expanded="true" />
-            <element signature="e#733#734#0" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1016#1017#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/PayoutTray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        <state relative-caret-position="6923">
+          <caret line="380" column="1" lean-forward="true" selection-start-line="380" selection-start-column="1" selection-end-line="380" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/SlotMachine/SlotMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1731">
-          <caret line="97" column="47" lean-forward="true" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+        <state relative-caret-position="267">
+          <caret line="172" column="13" lean-forward="true" selection-start-line="172" selection-start-column="13" selection-end-line="172" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/coin_related/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/GameModeFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ubp/doo/slotmachine/gamemode/GameModeContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

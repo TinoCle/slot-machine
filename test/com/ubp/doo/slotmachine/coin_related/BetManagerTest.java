@@ -13,7 +13,7 @@ class BetManagerTest {
     void testGetBet_3Reels_FirstPrize() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(5);
+        coinSlot.setCoinsInserted(5);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -32,7 +32,7 @@ class BetManagerTest {
     void testGetBet_3Reels_Error_FirstPrize() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(5);
+        coinSlot.setCoinsInserted(5);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -51,7 +51,7 @@ class BetManagerTest {
     void TestGetBet_3Reels_SecondPrize() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(5);
+        coinSlot.setCoinsInserted(5);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -70,7 +70,7 @@ class BetManagerTest {
     void TestGetBet_3Reels_Error_SecondPrize() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(5);
+        coinSlot.setCoinsInserted(5);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -89,7 +89,7 @@ class BetManagerTest {
     void TestGetBet_3Reels_ThirdPrize() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(5);
+        coinSlot.setCoinsInserted(5);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -108,7 +108,7 @@ class BetManagerTest {
     void TestGetBet_3Reels_Error_ThirdPrize() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(5);
+        coinSlot.setCoinsInserted(5);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -127,7 +127,7 @@ class BetManagerTest {
     void TestGetBet_5Reels_FirstPrize() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(5);
+        coinSlot.setCoinsInserted(5);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -148,7 +148,7 @@ class BetManagerTest {
     void TestGetBet_5Reels_Error_FirstPrize() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(5);
+        coinSlot.setCoinsInserted(5);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -169,7 +169,7 @@ class BetManagerTest {
     void TestGetBet_5Reels_SecondPrize() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(5);
+        coinSlot.setCoinsInserted(5);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -190,7 +190,7 @@ class BetManagerTest {
     void TestGetBet_5Reels_Error_SecondPrize() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(5);
+        coinSlot.setCoinsInserted(5);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -211,7 +211,7 @@ class BetManagerTest {
     void TestGetBet_5Reels_ThirdPrize() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(5);
+        coinSlot.setCoinsInserted(5);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -232,7 +232,7 @@ class BetManagerTest {
     void TestGetBet_5Reels_Error_ThirdPrize() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(5);
+        coinSlot.setCoinsInserted(5);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -253,7 +253,7 @@ class BetManagerTest {
     void TestGetBet_5Reels_FourthPrize() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(5);
+        coinSlot.setCoinsInserted(5);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -274,7 +274,7 @@ class BetManagerTest {
     void TestGetBet_5Reels_Error_FourthPrize() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(5);
+        coinSlot.setCoinsInserted(5);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -295,7 +295,7 @@ class BetManagerTest {
     void testSendToDropbox_Reduce() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(5);
+        coinSlot.setCoinsInserted(5);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -317,7 +317,7 @@ class BetManagerTest {
     void testSendToDropbox_Reduce_Error() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(5);
+        coinSlot.setCoinsInserted(5);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -339,7 +339,7 @@ class BetManagerTest {
     void testSendToDropbox_Increase() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(200);
+        coinSlot.setCoinsInserted(200);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();
@@ -361,7 +361,7 @@ class BetManagerTest {
     void testSendToDropbox_Increase_Error() {
         BetManager betManager = new BetManager(1000);
         CoinSlot coinSlot = new CoinSlot();
-        coinSlot.SetCoins(200);
+        coinSlot.setCoinsInserted(200);
         betManager.setCoinSlot(coinSlot);
 
         List<String> reelResults = new ArrayList<>();

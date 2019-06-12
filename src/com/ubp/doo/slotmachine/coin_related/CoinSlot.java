@@ -18,8 +18,4 @@ public class CoinSlot {
     public void AddCoin(int amount){
          coinsInserted+=amount;
     }
-
-    public void SetCoins(int amount){
-        this.coinsInserted=amount;
-    }
 }

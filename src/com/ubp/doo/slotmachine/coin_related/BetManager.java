@@ -43,7 +43,7 @@ public class BetManager {
     }
 
     public void resetBet(){
-        this.coinSlot.SetCoins(0);
+        this.coinSlot.setCoinsInserted(0);
     }
 
     public int getResult(List<String> result) {

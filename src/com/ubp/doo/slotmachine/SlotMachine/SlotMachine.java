@@ -26,7 +26,6 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
     private IReelsHandler iReelsHandler;
     private static SlotMachine instance;
 
-    private IRandomize randomize;
     private List<Integer> reelSize;
     private int reelQuantity;
 
@@ -52,7 +51,6 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
         System.out.println("ReelQuantity: " + settings.getReelsQuantity());
         System.out.println("SequenceQuantity: " + settings.getSequencesQuantity());*/
 
-        randomize = new Randomize();
         reelSize = new ArrayList<>();
         reelQuantity = settings.getReelsQuantity();
 
