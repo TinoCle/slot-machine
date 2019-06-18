@@ -24,10 +24,6 @@ public class RecordManager implements java.io.Serializable {
         recordSaver.Serialize(records);
     }
 
-    public List<Record> showRecord(){
-        return this.records;
-    }
-
     public void showRecords(){
         if (records.size() > 0) {
             System.out.println("Record nº\tBetAmount\tPrize\tResult\t\tReels");

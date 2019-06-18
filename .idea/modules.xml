@@ -3,8 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/slot-machine.iml" filepath="$PROJECT_DIR$/slot-machine.iml" />
-      <module fileurl="file://$USER_HOME$/Downloads/slot-machine-GUI/slot-machine-GUI.iml" filepath="$USER_HOME$/Downloads/slot-machine-GUI/slot-machine-GUI.iml" />
-      <module fileurl="file://$USER_HOME$/Downloads/ubpslotmachineui/ubpslotmachineui1.iml" filepath="$USER_HOME$/Downloads/ubpslotmachineui/ubpslotmachineui1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../slot-machine-GUI/slot-machine-GUI1.iml" filepath="$PROJECT_DIR$/../slot-machine-GUI/slot-machine-GUI1.iml" />
     </modules>
   </component>
 </project>
