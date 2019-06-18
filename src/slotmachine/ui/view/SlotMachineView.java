@@ -19,6 +19,7 @@ class SlotMachineView {
     private IInputHandler creditInputHandler;
     private IReelView reelView;
     private IReelsHandler reelsHandler;
+    private IRecordView recordView;
 
     protected SlotMachineView() {
         machineView = new MachineView();
@@ -49,6 +50,7 @@ class SlotMachineView {
 
         gameModeView = new GameModeView();
         resetView = new ResetView();
+        recordView = new RecordView();
 
         //reelView = new ReelView(5);
         //reelsHandler = (IReelsHandler) reelView;
@@ -60,6 +62,7 @@ class SlotMachineView {
         machineView.addGameModeView(gameModeView);
         machineView.addPayoutTrayView(payoutTrayView);
         machineView.addResetView(resetView);
+        machineView.addRecordView(recordView);
         //machineView.addReelView(reelView);
     }
 
@@ -82,6 +85,10 @@ class SlotMachineView {
 
     public void setResetHandler(IResetHandler handler){
         resetView.setResetHandler(handler);
+    }
+
+    public void setRecordHandler(IRecordHandler handler){
+        recordView.setRecordHandler(handler);
     }
 
     public IDisplayHandler getDisplayHandler() {

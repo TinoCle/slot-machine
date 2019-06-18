@@ -15,6 +15,7 @@ class MachineView {
     private JPanel gameModePanel;
     private JPanel payoutTrayPanel;
     private JPanel resetPanel;
+    private JPanel recordPanel;
 
     public MachineView() {
         machineFrame = new JFrame();
@@ -82,6 +83,11 @@ class MachineView {
         resetPanel.setBounds(320, 400, 150, 40);
         frontPanel.add(resetPanel);
 
+        recordPanel = new JPanel(new BorderLayout());
+        recordPanel.setBackground(Color.GREEN);
+        recordPanel.setBounds(320, 450, 150, 40);
+        frontPanel.add(recordPanel);
+
         gameModePanel = new JPanel(new BorderLayout());
         gameModePanel.setBackground(Color.GREEN);
         gameModePanel.setBounds(10, 10, 280, 80);
@@ -126,6 +132,10 @@ class MachineView {
 
     public void addResetView(IResetView view) {
         resetPanel.add(view.getComponent());
+    }
+
+    public void addRecordView(IRecordView view) {
+        recordPanel.add(view.getComponent());
     }
 
     public void addPayoutTrayView(IPayoutTrayView view) {
