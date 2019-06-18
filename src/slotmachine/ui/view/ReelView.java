@@ -17,10 +17,14 @@ public class ReelView implements IReelView, IReelsHandler {
         reels = new ArrayList<>();
 
         for (int i = 0; i < qty; i++) {
-            JLabel label = new JLabel("Reel " + i);
+            JLabel label = new JLabel();
+            IReelHandler handler = text -> {
+                //label.setText(text);
+                ImageIcon imageIcon = new ImageIcon(new ImageIcon(System.getProperty("user.dir") + "/Resources/"+text+".png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+                label.setIcon(imageIcon);
+            };
 
-            IReelHandler handler = label::setText;
-
+            //label.setIcon(new ImageIcon(System.getProperty("user.dir") + "/Resources/"+label.getText()+".png"));
             panel.add(label);
             reels.add(handler);
         }

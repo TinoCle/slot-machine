@@ -2,24 +2,26 @@ package slotmachine.ui.view;
 
 import slotmachine.ui.handler.IInputHandler;
 import slotmachine.ui.handler.IPlayHandler;
+import slotmachine.ui.handler.IResetHandler;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class ResetView implements IPlayView, IInputHandler {
+class ResetView implements IResetView, IInputHandler {
     private JButton button;
-    private IPlayHandler playHandler;
+    private IResetHandler resetHandler;
 
     public ResetView() {
         button = new JButton();
-        button.setText("Play");
+        button.setBounds(10,400,200,100);
+        button.setText("Reset");
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (playHandler != null) {
-                    playHandler.play();
+                if (resetHandler != null) {
+                    resetHandler.reset();
                 }
             }
         });
@@ -31,8 +33,8 @@ class ResetView implements IPlayView, IInputHandler {
     }
 
     @Override
-    public void setPlayHandler(IPlayHandler handler) {
-        playHandler = handler;
+    public void setResetHandler(IResetHandler handler){
+        resetHandler = handler;
     }
 
     @Override
