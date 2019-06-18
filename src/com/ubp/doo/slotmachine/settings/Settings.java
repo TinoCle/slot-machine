@@ -104,7 +104,7 @@ public class Settings {
                     reelSize += (random.nextInt(12)+1) + ",";
                 }
             }
-            values = "uva,cereza,manzana,banana,frutilla,durazno,naranaja,sandia,anana,pera,limon,kiwi";
+            values = "uva,cereza,manzana,banana,frutilla,durazno,naranja,sandia,anana,pera,limon,kiwi";
             SaveSettings();
         } catch (IOException e) {
             e.printStackTrace();
