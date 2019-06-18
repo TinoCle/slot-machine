@@ -13,7 +13,7 @@ import java.util.*;
 
 public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandler,
                                     IPrizeHandler, IReelManagerListener, IGameModeHandler,
-                                    IResetHandler{
+                                    IResetHandler, IRecordHandler{
     private ReelManager reelManager;
     private RecordManager recordManager;
     private BetManager betManager;
@@ -43,16 +43,15 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
     public void loadConfiguration() {
         settings = Settings.getInstance();
         gameMode = new GameModeContext();
+        reelQuantity = settings.getReelSize().split(",").length;
 
         //TODO comprobar que las settings esten
         /*System.out.println("GameMode: " + settings.getGameMode());
         System.out.println("ReelSize: " + settings.getReelSize());
         System.out.println("DropBox: " + settings.getDropBox());
-        System.out.println("ReelQuantity: " + settings.getReelsQuantity());
         System.out.println("SequenceQuantity: " + settings.getSequencesQuantity());*/
 
         reelSize = new ArrayList<>();
-        reelQuantity = settings.getReelsQuantity();
 
         SlotMachineViewFacade.setReelsQuantity(reelQuantity);
 
@@ -143,7 +142,6 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
         betManager.resetBet();
         settings.setDropBox(betManager.getDropBox().getTotalCoin());
         settings.SaveSettings();
-        recordManager.showRecords();
     }
 
     @Override
@@ -177,5 +175,11 @@ public class SlotMachine implements ICreditHandler, IDisplayHandler, IPlayHandle
         gameMode.setGameMode("random");
         settings.setGameMode(gameMode.getGameMode());
         settings.SaveSettings();
+    }
+
+    @Override
+    public void showRecords() {
+        RecordManager recordManager = new RecordManager();
+        recordManager.showRecords();
     }
 }

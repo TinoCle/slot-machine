@@ -10,7 +10,6 @@ public class Settings {
     private String gameMode;
     private int dropBox;
     private int sequencesQuantity;
-    private int reelsQuantity;
     private int spins;
     private String reelSize;
     private String values;
@@ -26,10 +25,6 @@ public class Settings {
 
     public int getSequencesQuantity() {
         return sequencesQuantity;
-    }
-
-    public int getReelsQuantity() {
-        return reelsQuantity;
     }
 
     public String getReelSize() {
@@ -70,7 +65,6 @@ public class Settings {
             properties.setProperty("GameMode", gameMode);
             properties.setProperty("DropBox", Integer.toString(dropBox));
             properties.setProperty("SequencesQuantity", Integer.toString(sequencesQuantity));
-            properties.setProperty("ReelsQuantity", Integer.toString(reelsQuantity));
             properties.setProperty("ReelSize", reelSize);
             properties.setProperty("Values",values);
             properties.setProperty("Spins",Integer.toString(spins));
@@ -93,7 +87,6 @@ public class Settings {
             gameMode = properties.getProperty("GameMode");
             dropBox = Integer.parseInt(properties.getProperty("DropBox"));
             sequencesQuantity = Integer.parseInt(properties.getProperty("SequencesQuantity"));
-            reelsQuantity = Integer.parseInt(properties.getProperty("ReelsQuantity"));
             reelSize = properties.getProperty("ReelSize");
             values = properties.getProperty("Values");
             spins = Integer.parseInt(properties.getProperty("Spins"));
@@ -102,11 +95,10 @@ public class Settings {
             dropBox = 1000;
             sequencesQuantity = 10;
             spins = 2;
-            reelsQuantity = 3;
             reelSize = "";
             Random random = new Random();
-            for (int i = 0; i < reelsQuantity; i++) {
-                if (i == reelsQuantity - 1) {
+            for (int i = 0; i < 3; i++) {
+                if (i == 2) {
                     reelSize += random.nextInt(12)+1;
                 } else {
                     reelSize += (random.nextInt(12)+1) + ",";
