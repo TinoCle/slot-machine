@@ -1,7 +1,5 @@
 package com.ubp.doo.slotmachine.coin_related;
 
-import slotmachine.ui.data.ICredit;
-
 public class CoinSlot {
     private int coinsInserted;
 
@@ -19,9 +17,5 @@ public class CoinSlot {
 
     public void AddCoin(int amount){
          coinsInserted+=amount;
-    }
-
-    public void SetCoins(int amount){
-        this.coinsInserted=amount;
     }
 }
