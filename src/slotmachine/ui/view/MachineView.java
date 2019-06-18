@@ -1,7 +1,10 @@
 package slotmachine.ui.view;
 
+<<<<<<< HEAD
 import slotmachine.ui.handler.IInputHandler;
 
+=======
+>>>>>>> 4980cf247d6c3f4aed00d8a7d97b257b7d050323
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -85,11 +88,14 @@ class MachineView {
         resetPanel.setBounds(320, 400, 150, 40);
         frontPanel.add(resetPanel);
 
+<<<<<<< HEAD
         recordPanel = new JPanel(new BorderLayout());
         recordPanel.setBackground(Color.GREEN);
         recordPanel.setBounds(320, 450, 150, 40);
         frontPanel.add(recordPanel);
 
+=======
+>>>>>>> 4980cf247d6c3f4aed00d8a7d97b257b7d050323
         gameModePanel = new JPanel(new BorderLayout());
         gameModePanel.setBackground(Color.GREEN);
         gameModePanel.setBounds(10, 10, 280, 80);
