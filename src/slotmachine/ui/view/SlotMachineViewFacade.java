@@ -35,6 +35,10 @@ public class SlotMachineViewFacade {
         getInstance().setResetHandler(handler);
     }
 
+    public static void setRecordHandler(IRecordHandler handler){
+        getInstance().setRecordHandler(handler);
+    }
+
     public static IDisplayHandler getDisplayHandler() {
         return getInstance().getDisplayHandler();
     }
